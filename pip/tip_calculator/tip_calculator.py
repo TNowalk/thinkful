@@ -7,24 +7,24 @@ Tip Calculator Revisited
 @date 2014-01-16
 '''
 
-# Import the OptionParser
-from optparse import OptionParser
+# Import the ArgParser
+import argparse
 
-# Initialize the OptionParser
-parser = OptionParser()
+# Initialize the parser
+parser = argparse.ArgumentParser(description = "Tip Calculator")
 
-# Set up the named args
-parser.add_option("-m", "--meal", dest="meal", help="Enter the base meal price", default=0.00)
-parser.add_option("-x", "--tax", dest="tax", help="Enter the tax rate", default=0.00)
-parser.add_option("-t", "--tip", dest="tip", help="Enter the tip percentage", default=0.00)
+# Set up the named arguments
+parser.add_argument("-m", "--meal", type = float, help = "Enter the base meal price", default = 0.00)
+parser.add_argument("-x", "--tax", type = float, help = "Enter the tax rate", default = 0.00)
+parser.add_argument("-t", "--tip", type = float, help = "Enter the tip percentage", default = 0.00)
 
 # Parse the arguments
-(opts, args) = parser.parse_args()
+opts = parser.parse_args()
 
 # Init the variables that will be used
-meal = float(opts.meal) # Base price of the meal
-tax  = float(opts.tax)  # Tax rate for the meal
-tip  = float(opts.tip)  # Tip rate for the meal
+meal = opts.meal # Base price of the meal
+tax  = opts.tax  # Tax rate for the meal
+tip  = opts.tip  # Tip rate for the meal
 
 # Calculate the tax and tip amount
 tax_value = meal * (tax / 100)
