@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  
+    <div class='container' ng-controller='ProjectsCtrl'>
+
+      <div class="jumbotron">
+        <div class="page-header">
+          <h1>Thinkful Coursework <small>by Trevor Nowalk</small></h1>
+        </div>
+        <p>
+          Below are the various projects completed as part of the Thinkful curriculum.
+        </p>
+      </div>
+
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default" ng-repeat="(idx, course) in courses">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{course.code}}">
+                {{course.name}}
+              </a>
+            </h4>
+          </div>
+          <div id="collapse-{{course.code}}" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <ul class="list-group">
+                <li ng-repeat="project in projects[idx]" class="list-group-item">
+                  <a href='{{idx}}/{{project.filename}}'>{{project.name}}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- End .container -->
+  </body>
+</html>
