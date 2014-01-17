@@ -8,9 +8,9 @@ Tip Calculator Revisited
 '''
 
 # Init the variables that will be used
-meal = 20.00 # Base price of the meal
-tax = 8.00 # Tax rate for the meal
-tip = 15.00 # Tip rate for the meal
+meal = float(raw_input("Enter the meal price: "))     # Base price of the meal
+tax  = float(raw_input("Enter the tax Rate: "))       # Tax rate for the meal
+tip  = float(raw_input("Enter the tip Percentage: ")) # Tip rate for the meal
 
 # Calculate the tax and tip amount
 tax_value = meal * (tax / 100)
