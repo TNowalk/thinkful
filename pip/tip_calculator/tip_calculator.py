@@ -7,10 +7,12 @@ Tip Calculator Revisited
 @date 2014-01-16
 '''
 
+import sys
+
 # Init the variables that will be used
-meal = float(raw_input("Enter the meal price: "))     # Base price of the meal
-tax  = float(raw_input("Enter the tax Rate: "))       # Tax rate for the meal
-tip  = float(raw_input("Enter the tip Percentage: ")) # Tip rate for the meal
+meal = float(sys.argv[1]) # Base price of the meal
+tax  = float(sys.argv[2]) # Tax rate for the meal
+tip  = float(sys.argv[3]) # Tip rate for the meal
 
 # Calculate the tax and tip amount
 tax_value = meal * (tax / 100)
