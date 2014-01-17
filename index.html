@@ -55,7 +55,19 @@
             <div class="panel-body">
               <ul class="list-group">
                 <li ng-repeat="project in projects[idx]" class="list-group-item">
-                  <a href='{{idx}}/{{project.filename}}'>{{project.name}}</a></li>
+                  {{project.name}}
+                  <div class='pull-right'>
+                    <a href='{{idx}}/{{project.filename}}' 
+                       class='btn btn-primary btn-xs'>
+                      <span class='glyphicon glyphicon-open'></span> Direct Download
+                    </a>
+                    <a href='{{project.gitHubUrl}}' 
+                      class='btn btn-default btn-xs'
+                      target="_blank">
+                      <span class='glyphicon glyphicon-cloud'></span> View in GitHub
+                    </a>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
