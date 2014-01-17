@@ -11,7 +11,9 @@ function ProjectsCtrl($scope) {
     ios: [],
     pip: [
       {name: "Exercise 1: A Good First Program", filename: "lpthw_ex_1.py"},
-      {name: "Exercise 2: Comments and Pound Characters", filename: "lpthw_ex_2.py"}
+      {name: "Exercise 2: Comments and Pound Characters", filename: "lpthw_ex_2.py"},
+      {name: "Exercise 11: Asking Questions", filename: "lpthw_ex_11.py"},
+      {name: "Exercise 12: Prompting People", filename: "lpthw_ex_12.py"}
     ],
     ror: []
   };
