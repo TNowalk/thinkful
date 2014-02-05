@@ -1,32 +1,38 @@
 function ProjectsCtrl($scope) {
   $scope.courses = {
-    //fewd: {code: 'FEWD-001', name: 'Front-End Web Development'},
+    fewd: {code: 'FEWD-001', name: 'Front-End Web Development'},
     //ios: {code: 'IOS-001', name: 'iOS Development'},
     pip: {code: 'PIP-001', name: 'Programming in Python'},
     //ror: {code: 'ROR-001', name: 'Ruby on Rails'}
   };
 
   $scope.projects = {
-    fewd: [],
+    fewd: [
+      {
+        name: "HTML Resume",
+        filename: "resume_v1/index.html",
+        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/index.html"
+      }
+    ],
     ios: [],
     pip: [
       {
-        name: "Exercise 1: A Good First Program", 
+        name: "Exercise 1: A Good First Program",
         filename: "lpthw_ex_1.py",
         gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_1.py"
       },
       {
-        name: "Exercise 2: Comments and Pound Characters", 
+        name: "Exercise 2: Comments and Pound Characters",
         filename: "lpthw_ex_2.py",
         gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_2.py"
       },
       {
-        name: "Exercise 11: Asking Questions", 
+        name: "Exercise 11: Asking Questions",
         filename: "lpthw_ex_11.py",
         gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_11.py"
       },
       {
-        name: "Exercise 12: Prompting People", 
+        name: "Exercise 12: Prompting People",
         filename: "lpthw_ex_12.py",
         gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_12.py"
       },
