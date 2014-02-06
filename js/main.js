@@ -12,6 +12,11 @@ function ProjectsCtrl($scope) {
         name: "HTML Resume",
         filename: "resume_v1/index.html",
         gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/resume_v1/index.html"
+      },
+      {
+        name: "Style Your Resume",
+        filename: "resume_v2/index.html",
+        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/resume_v2/index.html"
       }
     ],
     ios: [],
