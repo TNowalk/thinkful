@@ -1,0 +1,167 @@
+/** Start Header **/
+header {
+  min-width: 922px;
+  margin: 14px 29px;
+}
+
+header ul {
+
+}
+
+header li {
+  color: #404040;
+  float: left;
+}
+
+header .text {
+  margin-right: 15px;
+  font-size: 13px;
+  line-height: 31px;
+}
+
+.icon {
+  opacity: .55;
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+  margin-top: 1px;
+}
+
+.grid {
+  display: block;
+  background: url(../images/sprite.png);
+  background-position: -431px -242px;
+}
+
+.bell {
+  display: block;
+  background: url(../images/sprite.png);
+}
+
+.share {
+  position: relative;
+}
+
+.share a {
+  position: relative;
+  display: inline-block;
+  background: rgba(0,0,0,.04);
+  margin-right: 14px;
+  margin-top: 1px;
+  color: #404040;
+  cursor: default;
+  text-decoration: none;
+  height: 30px;
+  width: 60px;
+  text-align: center;
+  line-height: 30px;
+  vertical-align: middle;
+  font-size: 13px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-sizing: border-box;
+}
+
+.share a:after {
+  border-left: 4px solid rgba(0,0,0,.04);
+  border-top: 4px solid transparent;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  right: -4px;
+  height: 0;
+  width: 0;
+}
+
+.profile-pic {
+  display: block;
+  background: url(../images/profile.jpg);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+/** End Header **/
+
+/** Start Main Content **/
+.main-content {
+  min-width: 980px;
+  margin: auto;
+}
+
+.logo {
+  width: 269px;
+  margin: auto;
+  margin-top: 146px;
+}
+
+.logo img {
+  width: 269px;
+  height: 95px;
+}
+
+.search-form {
+  width: 572px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.search-input {
+  height: 26px;
+  width: 568px;
+  border: 1px solid #cdcdcd;
+  border-color: rgba(0,0,0,.15);
+  background: url(../images/microphone.png) no-repeat right;
+  background-size: 23px 24px;
+}
+
+.search-button {
+  background: #f5f5f5;
+  background: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+  background: linear-gradient(top,#f5f5f5,#f1f1f1);
+  border: 1px solid #dcdcdc;
+  border-color: rgba(0,0,0,0.1);
+  color: #444!important;
+  font-size: 11px;
+  font: bold 11px/27px Arial,sans-serif!important;
+  margin: 16px 6px;
+  cursor: default!important;
+  display: inline-block;
+  font-weight: bold;
+  height: 29px;
+  line-height: 29px;
+  min-width: 54px;
+  padding: 0 8px;
+  text-align: center;
+  text-decoration: none!important;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-user-select: none;
+}
+/** End Main Content **/
+
+/** Start Footer **/
+header {
+
+}
+/** End Footer **/
+
+/** General Styles **/
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  font-family: arial,sans-serif;
+}
