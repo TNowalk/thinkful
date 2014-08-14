@@ -40,6 +40,18 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: 'ngMadLibs/v1/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/ngMadLibs/v1/index.html'
+      },
+      {
+        name: 'ngMadLibs Version 2',
+        type: 'git',
+        filename: 'ngMadLibs/v2/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/ngMadLibs/v2/index.html'
+      },
+      {
+        name: 'Multiplication Table Version 1',
+        type: 'git',
+        filename: 'multiply/v1/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/multiply/v1/index.html'
       }
     ],
     fewd: [

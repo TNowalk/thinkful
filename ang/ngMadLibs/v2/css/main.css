@@ -1,0 +1,66 @@
+.container {
+  width: 680px;
+  margin: 20px auto;
+}
+
+.clear {
+  clear: both;
+}
+
+#logo {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  float: left;
+  height: 100px;
+  padding: 10px;
+}
+
+#logo img {
+  width: 100px;
+  height: 100%;
+}
+
+#catch-phrase {
+  border: 1px solid black;
+  float: left;
+  width: 537px;
+  height: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+#catch-phrase img {
+  width: 180px;
+  height: 50px;
+}
+
+#catch-phrase h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+#form-container,
+#result-container {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+
+#form-container .column {
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+#form-container input {
+  text-align: center;
+}
+
+#form-container h2 {
+  font-weight: normal;
+  font-size: 1.3em;
+}

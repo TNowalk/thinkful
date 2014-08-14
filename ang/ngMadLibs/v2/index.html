@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="ngMadLibs">
+  <head>
+    <meta charset="utf-8">
+    <title>ngMadLibs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+  </head>
+  <body ng-cloak>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class='container' ng-controller="MainCtrl">
+      <div id="header">
+        <div id="logo">
+          <img src="assets/mad-lib-happy-face.png" alt="Happy face">
+        </div>
+        <div id="catch-phrase">
+          <img src="assets/ng-mad-libs-logo.png" alt="ngMadLibs">
+          <h1>Automate This!</h1>
+        </div>
+
+        <div class='clear'></div>
+      </div>
+
+      <div id="form-container">
+        <h2>Provide the following words:</h2>
+
+        <div class="column">
+          <p><input type="text" placeholder="Female name" size="12" ng-model="data.femaleName"></p>
+          <p><input type="text" placeholder="Job Title" size="12" ng-model="data.jobTitle"></p>
+          <p><input type="text" placeholder="Tedious Task" size="16" ng-model="data.tediousTask"></p>
+        </div>
+
+        <div class="column">
+          <p><input type="text" placeholder="Dirty Task" size="10" ng-model="data.dirtyTask"></p>
+          <p><input type="text" placeholder="Celebrity" size="9" ng-model="data.celebrity"></p>
+          <p><input type="text" placeholder="Useless Skill" size="12" ng-model="data.uselessSkill"></p>
+        </div>
+
+        <div class="column">
+          <p><input type="text" placeholder="Obnoxious Celebrity" size="20" ng-model="data.obnoxiousCelebrity"></p>
+          <p><input type="text" placeholder="Huge Number" size="15" ng-model="data.hugeNumber"></p>
+          <p><input type="text" placeholder="Adjective" size="10" ng-model="data.adjective"></p>
+        </div>
+
+        <div class='clear'></div>
+      </div>
+
+      <div id="result-container">
+        <p>
+          {{data.femaleName}} was a {{data.jobTitle}} who loved technology. Although she loved parts of her job, she absolutely hated  {{data.tediousTask}} and {{data.dirtyTask}}. So, {{data.femaleName}} met with her life mentor {{data.celebrity}} who told her to learn how to {{data.uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{data.uselessSkill}} so she studied programming instead.
+        </p>
+
+        <p>
+          What a great decision! With her new skills, {{data.femaleName}} built a(n) {{data.adjective}} robot named {{data.obnoxiousCelebrity}} that not only loved {{data.dirtyTask}} but did it {{data.hugeNumber}} faster.
+        </p>
+      </div>
+    </div> <!-- End .container -->
+
+    <script src='js/app.js'></script>
+  </body>
+</html>
