@@ -52,6 +52,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: 'multiply/v1/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/multiply/v1/index.html'
+      },
+      {
+        name: 'Multiplication Table Version 2',
+        type: 'git',
+        filename: 'multiply/v2/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/multiply/v2/index.html'
       }
     ],
     fewd: [
