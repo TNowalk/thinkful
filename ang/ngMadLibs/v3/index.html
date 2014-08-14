@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="ngMadLibs">
+  <head>
+    <meta charset="utf-8">
+    <title>ngMadLibs</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+  </head>
+  <body ng-cloak>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class='container' ng-controller="MainCtrl">
+      <div id="header">
+        <div id="logo">
+          <img src="assets/mad-lib-happy-face.png" alt="Happy face">
+        </div>
+        <div id="catch-phrase">
+          <img src="assets/ng-mad-libs-logo.png" alt="ngMadLibs">
+          <h1>Automate This!</h1>
+        </div>
+
+        <div class='clear'></div>
+      </div>
+
+      <div id="form-container" ng-show="!submitted || !madLibsForm.$valid">
+        <h2>Provide the following words:</h2>
+
+        <form name="madLibsForm" ng-submit="submit(); submitted = true;">
+
+          <div class="column">
+            <p>
+              <input type="text" placeholder="Female name" size="12" ng-model="data.femaleName" required>
+            </p>
+            <p>
+              <input type="text" placeholder="Job Title" size="12" ng-model="data.jobTitle" required>
+            </p>
+            <p>
+              <input type="text" placeholder="Tedious Task" size="16" ng-model="data.tediousTask" required>
+            </p>
+          </div>
+
+          <div class="column">
+            <p>
+              <input type="text" placeholder="Dirty Task" size="10" ng-model="data.dirtyTask" required>
+            </p>
+            <p>
+              <input type="text" placeholder="Celebrity" size="9" ng-model="data.celebrity" required>
+            </p>
+            <p>
+              <input type="text" placeholder="Useless Skill" size="12" ng-model="data.uselessSkill" required>
+            </p>
+          </div>
+
+          <div class="column">
+            <p>
+              <input type="text" placeholder="Obnoxious Celebrity"
+                     size="20" ng-model="data.obnoxiousCelebrity" required>
+            </p>
+            <p>
+              <input type="number" min="0" placeholder="Huge Number" size="15" ng-model="data.hugeNumber" required>
+            </p>
+            <p>
+              <input type="text" placeholder="Adjective" size="10" ng-model="data.adjective" required>
+            </p>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class='error' ng-if="submitted && madLibsForm.$error">
+            Please fill in all inputs
+          </div>
+
+          <hr />
+
+          <div class="text-right">
+            <button type="submit" class="button">Generate My Mad Lib</button>
+          </div>
+        </form>
+
+      </div>
+
+      <div id="result-container" ng-if="submitted && madLibsForm.$valid">
+        <p>
+          <u>{{data.femaleName}}</u> was a <u>{{data.jobTitle}}</u> who loved technology. Although she loved parts of her job, she absolutely hated  <u>{{data.tediousTask}}</u> and <u>{{data.dirtyTask}}</u>. So, <u>{{data.femaleName}}</u> met with her life mentor <u>{{data.celebrity}}</u> who told her to learn how to <u>{{data.uselessSkill}}</u> with Thinkful. Thinkful didn't offer a course on <u>{{data.uselessSkill}}</u> so she studied programming instead.
+        </p>
+
+        <p>
+          What a great decision! With her new skills, <u>{{data.femaleName}}</u> built a(n) <u>{{data.adjective}}</u> robot named <u>{{data.obnoxiousCelebrity}}</u> that not only loved <u>{{data.dirtyTask}}</u> but did it <u>{{data.hugeNumber}}</u> faster.
+        </p>
+
+        <hr />
+
+        <div class="text-right">
+          <button type="button" ng-click="reset()" class="button">Start Over</button>
+        </div>
+      </div>
+    </div> <!-- End .container -->
+
+    <script src='js/app.js'></script>
+  </body>
+</html>
