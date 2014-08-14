@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="WaitstaffApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Waitstaff Calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.22/angular.min.js"></script>
+  </head>
+  <body ng-cloak>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class='container' ng-controller="MainCtrl">
+      <div id="header">
+        <h1>Waitstaff Calculator</h1>
+      </div>
+
+      <div id="form-container">
+        <h3>Enter the Meal Details</h3>
+        <form name="mealDetailsForm" ng-submit="submit(); submitted = true;">
+          <p ng-class="{hasError:mealDetailsForm.basePrice.$dirty && !mealDetailsForm.basePrice.$valid}">
+            <label>Base Meal Price: $</label>
+            <input type="number" min="0" name="basePrice" ng-model="data.basePrice" required>
+          </p>
+          <p ng-class="{hasError:mealDetailsForm.taxRate.$dirty && !mealDetailsForm.taxRate.$valid}">
+            <label>Tax Rate: </label>
+            <input type="number" min="0" name="taxRate" ng-model="data.taxRate" class="sm" required> %
+          </p>
+          <p ng-class="{hasError:mealDetailsForm.tipRate.$dirty && !mealDetailsForm.tipRate.$valid}">
+            <label>Tip Percentage: </label>
+            <input type="number" min="0" name="tipRate" ng-model="data.tipRate" class="sm" required> %
+          </p>
+
+          <div class='error' ng-if="myForm.$error && submitted || showError">
+            Please provide valid numbers
+          </div>
+
+          <div class="text-center" id="button-container">
+            <button type="submit" class="button">Submit</button>
+            <button type="button" ng-click="resetDetails()" class="button">Reset</button>
+          </div>
+
+        </form>
+      </div>
+
+      <div id="result-container">
+        <div id="customer-charges">
+          <h3>Customer Charges</h3>
+
+          <p>
+            <label>Subtotal</label>
+            {{charges.subTotal | currency: usd}}
+          </p>
+          <p>
+            <label>Tip</label>
+            {{charges.tipTotal | currency: usd}}
+          </p>
+          <hr>
+          <p>
+            <label>Total</label>
+            {{charges.total | currency: usd}}
+          </p>
+        </div>
+
+        <div id="my-earnings">
+          <h3>My Earnings Info</h3>
+
+          <p>
+            <label>Tip Total: </label>
+            {{earnings.tipTotal | currency: usd}}
+          </p>
+          <p>
+            <label>Meal Count: </label>
+            {{earnings.mealCount | number}}
+          </p>
+          <p>
+            <label>Average Tip Per Meal: </label>
+            {{calculateAverage(earnings.tipTotal, earnings.mealCount) | currency: usd}}
+          </p>
+        </div>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="text-right container">
+        <button type="button" ng-click="refresh()" class="button">Reset</button>
+      </div>
+    </div> <!-- End .container -->
+
+    <script src='js/app.js'></script>
+  </body>
+</html>

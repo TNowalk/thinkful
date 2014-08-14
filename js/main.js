@@ -64,6 +64,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: 'multiply/v2/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/multiply/v2/index.html'
+      },
+      {
+        name: 'Waitstaff Calculator',
+        type: 'git',
+        filename: 'waitstaff/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/waitstaff/index.html'
       }
     ],
     fewd: [
