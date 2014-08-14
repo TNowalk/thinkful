@@ -29,6 +29,12 @@ function ProjectsCtrl($scope) {
         name: 'Challenge Three: Countries Data',
         type: 'cssdeck',
         url: 'http://cssdeck.com/labs/hzsebbkc'
+      },
+      {
+        name: 'ngMadLibs Version 1',
+        type: 'git',
+        filename: 'ngMadLibs/v1/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/ngMadLibs/v1/index.html'
       }
     ],
     fewd: [
