@@ -1,4 +1,9 @@
-function ProjectsCtrl($scope) {
+'use strict';
+
+angular.module('ThinkfulProjects', []);
+angular.module('ThinkfulProjects')
+  .controller('ProjectsCtrl', ['$scope', function($scope) {
+
   $scope.courses = {
     ang: {code: 'ANG-001', name: 'Learn AngularJS'},
     fewd: {code: 'FEWD-001', name: 'Front-End Web Development'},
@@ -92,4 +97,4 @@ function ProjectsCtrl($scope) {
     ],
     ror: []
   };
-}
+}]);

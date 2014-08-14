@@ -1,6 +1,5 @@
 'use strict';
 
-var ngMadLibsApp = angular.module('ngMadLibs',[]);
-
-ngMadLibsApp.controller('MainCtrl', ['$scope', function($scope) {
+angular.module('ngMadLibs',[]);
+angular.module('ngMadLibs',[]).controller('MainCtrl', ['$scope', function($scope) {
 }]);
