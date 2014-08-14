@@ -10,54 +10,78 @@ function ProjectsCtrl($scope) {
   $scope.projects = {
     ang: [
       {
-        name: "Adder / Subtractor",
-        filename: "adder/index.html",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/ang/adder/index.html"
+        name: 'Adder / Subtractor',
+        type: 'git',
+        filename: 'adder/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/adder/index.html'
+      },
+      {
+        name: 'Challenge One: Sorting Months',
+        type: 'cssdeck',
+        url: 'http://cssdeck.com/labs/0elctcsp'
+      },
+      {
+        name: 'Challenge Two: Fizz Buzz',
+        type: 'cssdeck',
+        url: 'http://cssdeck.com/labs/uuho5nal'
+      },
+      {
+        name: 'Challenge Three: Countries Data',
+        type: 'cssdeck',
+        url: 'http://cssdeck.com/labs/hzsebbkc'
       }
     ],
     fewd: [
       {
-        name: "HTML Resume",
-        filename: "resume_v1/index.html",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/resume_v1/index.html"
+        name: 'HTML Resume',
+        type: 'git',
+        filename: 'resume_v1/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/resume_v1/index.html'
       },
       {
-        name: "Style Your Resume",
-        filename: "resume_v2/index.html",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/resume_v2/index.html"
+        name: 'Style Your Resume',
+        type: 'git',
+        filename: 'resume_v2/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/resume_v2/index.html'
       },
       {
-        name: "Google Clone",
-        filename: "google-clone/index.html",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/google-clone/index.html"
+        name: 'Google Clone',
+        type: 'git',
+        filename: 'google-clone/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd/google-clone/index.html'
       }
     ],
     ios: [],
     pip: [
       {
-        name: "Exercise 1: A Good First Program",
-        filename: "lpthw_ex_1.py",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_1.py"
+        name: 'Exercise 1: A Good First Program',
+        type: 'git',
+        filename: 'lpthw_ex_1.py',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_1.py'
       },
       {
-        name: "Exercise 2: Comments and Pound Characters",
-        filename: "lpthw_ex_2.py",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_2.py"
+        name: 'Exercise 2: Comments and Pound Characters',
+        type: 'git',
+        filename: 'lpthw_ex_2.py',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_2.py'
       },
       {
-        name: "Exercise 11: Asking Questions",
-        filename: "lpthw_ex_11.py",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_11.py"
+        name: 'Exercise 11: Asking Questions',
+        type: 'git',
+        filename: 'lpthw_ex_11.py',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_11.py'
       },
       {
-        name: "Exercise 12: Prompting People",
-        filename: "lpthw_ex_12.py",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_12.py"
+        name: 'Exercise 12: Prompting People',
+        type: 'git',
+        filename: 'lpthw_ex_12.py',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/pip/lpthw_ex_12.py'
       },
       {
-        name: "Unit 1, Lesson 5: Tip Calculator",
-        filename: "tip_calculator/tip_calculator.py",
-        gitHubUrl: "https://github.com/TNowalk/thinkful/blob/gh-pages/pip/tip_calculator/tip_calculator.py"
+        name: 'Unit 1, Lesson 5: Tip Calculator',
+        type: 'git',
+        filename: 'tip_calculator/tip_calculator.py',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/pip/tip_calculator/tip_calculator.py'
       }
     ],
     ror: []

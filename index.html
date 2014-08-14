@@ -30,7 +30,7 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  
+
     <div class='container' ng-controller='ProjectsCtrl'>
 
       <div class="jumbotron">
@@ -57,14 +57,22 @@
                 <li ng-repeat="project in projects[idx]" class="list-group-item">
                   {{project.name}}
                   <div class='pull-right'>
-                    <a href='{{idx}}/{{project.filename}}' 
+                    <a ng-if="project.type == 'git'"
+                       ng-href='{{idx}}/{{project.filename}}'
                        class='btn btn-primary btn-xs'>
                       <span class='glyphicon glyphicon-download'></span> Direct Download
                     </a>
-                    <a href='{{project.gitHubUrl}}' 
-                      class='btn btn-default btn-xs'
-                      target="_blank">
+                    <a ng-if="project.type == 'git'"
+                       ng-href='{{project.gitHubUrl}}'
+                       class='btn btn-default btn-xs'
+                       target="_blank">
                       <span class='glyphicon glyphicon-cloud'></span> View in GitHub
+                    </a>
+                    <a ng-if="project.type == 'cssdeck'"
+                       ng-href='{{project.url}}'
+                       class='btn btn-default btn-xs'
+                       target="_blank">
+                      <span class='glyphicon glyphicon-new-window'></span> View on CSSDeck
                     </a>
                   </div>
                 </li>
