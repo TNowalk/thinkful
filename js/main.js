@@ -131,7 +131,7 @@ angular.module('ThinkfulProjects')
       {
         name: 'Build a Tip Calculator from Scratch',
         type: 'git',
-        filename: 'index.html',
+        filename: 'tipCalculator/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/node/tipCalculator/index.html'
       }
     ]
