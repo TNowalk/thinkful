@@ -1,0 +1,101 @@
+.container {
+  width: 680px;
+  margin: 20px auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.button {
+  padding: 5px 15px;
+  border: 1px solid #000;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  background: #FFF;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #F3F3F3;
+}
+
+.button:active {
+  border-width: 1px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+#logo {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  float: left;
+  height: 100px;
+  padding: 10px;
+}
+
+#logo img {
+  width: 100px;
+  height: 100%;
+}
+
+#catch-phrase {
+  border: 1px solid black;
+  float: left;
+  width: 537px;
+  height: 100px;
+  text-align: center;
+  padding: 10px;
+}
+
+#catch-phrase img {
+  width: 180px;
+  height: 50px;
+}
+
+#catch-phrase h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+#form-container,
+#result-container {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 20px;
+}
+
+#form-container .column {
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+
+#form-container input {
+  text-align: center;
+}
+
+#form-container h2 {
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.hidden.flipped-add-stagger,
+.hidden.flipped-remove-stagger {
+  -webkit-transition-delay:0.2s;
+  transition-delay:0.2s;
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}

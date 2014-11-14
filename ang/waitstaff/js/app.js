@@ -1,6 +1,5 @@
 'use strict';
 
-angular.module('WaitstaffApp',[]);
 angular.module('WaitstaffApp',[]).controller('MainCtrl', ['$scope', function($scope) {
   $scope.submitted = false;
   $scope.showError = false;

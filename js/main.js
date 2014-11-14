@@ -10,6 +10,7 @@ angular.module('ThinkfulProjects')
     //ios: {code: 'IOS-001', name: 'iOS Development'},
     pip: {code: 'PIP-001', name: 'Programming in Python'},
     //ror: {code: 'ROR-001', name: 'Ruby on Rails'}
+    node: {code: 'NODE-001', name: 'Learn NodeJS'}
   };
 
   $scope.projects = {
@@ -125,6 +126,14 @@ angular.module('ThinkfulProjects')
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/pip/tip_calculator/tip_calculator.py'
       }
     ],
-    ror: []
+    ror: [],
+    node: [
+      {
+        name: 'Build a Tip Calculator from Scratch',
+        type: 'git',
+        filename: 'index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/node/tipCalculator/index.html'
+      }
+    ]
   };
 }]);
