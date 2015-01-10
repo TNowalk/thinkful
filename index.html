@@ -57,7 +57,7 @@
                 <li ng-repeat="project in projects[idx]" class="list-group-item">
                   {{project.name}}
                   <div class='pull-right'>
-                    <a ng-if="project.type == 'git'"
+                    <a ng-if="project.type == 'git' &amp;&amp; project.filename != undefined"
                        ng-href='{{idx}}/{{project.filename}}'
                        class='btn btn-primary btn-xs'>
                       <span class='glyphicon glyphicon-download'></span> Direct Download

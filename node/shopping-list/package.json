@@ -1,0 +1,11 @@
+{
+  "name": "shopping-list",
+  "version": "0.0.0",
+  "description": "Shopping list app as part of the Thinkful curriculum",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trevor Nowalk",
+  "license": "ISC"
+}

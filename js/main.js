@@ -127,13 +127,19 @@ angular.module('ThinkfulProjects')
       }
     ],
     ror: [],
-    node: [
-      {
+    node: [{
         name: 'Build a Tip Calculator from Scratch',
         type: 'git',
         filename: 'tipCalculator/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/node/tipCalculator/index.html'
-      }
-    ]
+    },{
+        name: 'Hello World Server',
+        type: 'git',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/node/helloWorld/server.js'
+    },{
+        name: 'Getting Started With Our Shopping List App',
+        type: 'git',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/node/shopping-list/server.js'
+    }]
   };
 }]);
