@@ -96,6 +96,12 @@ angular.module('ThinkfulProjects')
         name: '1.3.2 - Hack the New York Times',
         type: 'image',
         src:  'fewdv4/1.3.2/1.3.2 - NYT Hack.png'
+      },
+      {
+        name: '1.4 - Build a Landing Page from Scratch',
+        type: 'git',
+        filename: '1.4/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/1.4/index.html'
       }
     ],
     fewd: [
