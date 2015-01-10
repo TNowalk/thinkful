@@ -1,0 +1,14 @@
+body {
+  background-color: #C9C9C9;
+  text-align: center;
+}
+
+h1 {
+  color: red;
+}
+
+ul {
+  width: 200px;
+  margin: auto;
+  text-align: left;
+}

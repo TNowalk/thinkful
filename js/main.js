@@ -6,7 +6,8 @@ angular.module('ThinkfulProjects')
 
   $scope.courses = {
     ang: {code: 'ANG-001', name: 'Learn AngularJS'},
-    fewd: {code: 'FEWD-001', name: 'Front-End Web Development'},
+    fewdv4: {code: 'FEWD-001', name: 'Front-End Web Development v4'},
+    fewd: {code: 'FEWD-001', name: 'Front-End Web Development v1'},
     //ios: {code: 'IOS-001', name: 'iOS Development'},
     pip: {code: 'PIP-001', name: 'Programming in Python'},
     //ror: {code: 'ROR-001', name: 'Ruby on Rails'}
@@ -71,6 +72,30 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: 'waitstaff/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/waitstaff/index.html'
+      }
+    ],
+    fewdv4: [
+      {
+        name: '1.1.1 - Introducing HTML',
+        type: 'git',
+        filename: '1.1.1/freshprince.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/1.1.1/freshprince.html'
+      },
+      {
+        name: '1.1.2 - Introducing CSS',
+        type: 'git',
+        filename: '1.1.2/freshprince.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/1.1.2/freshprince.html'
+      },
+      {
+        name: '1.2 - Build an About Me Page',
+        type: 'codepen',
+        url: 'http://codepen.io/TNowalk/full/RNKMdY'
+      },
+      {
+        name: '1.3.2 - Hack the New York Times',
+        type: 'image',
+        src:  'fewdv4/1.3.2/1.3.2 - NYT Hack.png'
       }
     ],
     fewd: [

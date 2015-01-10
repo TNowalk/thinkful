@@ -24,6 +24,8 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
 
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <script src="js/main.js"></script>
   </head>
   <body>
@@ -55,25 +57,68 @@
             <div class="panel-body">
               <ul class="list-group">
                 <li ng-repeat="project in projects[idx]" class="list-group-item">
-                  {{project.name}}
-                  <div class='pull-right'>
-                    <a ng-if="project.type == 'git' &amp;&amp; project.filename != undefined"
-                       ng-href='{{idx}}/{{project.filename}}'
-                       class='btn btn-primary btn-xs'>
-                      <span class='glyphicon glyphicon-download'></span> Direct Download
-                    </a>
-                    <a ng-if="project.type == 'git'"
-                       ng-href='{{project.gitHubUrl}}'
-                       class='btn btn-default btn-xs'
-                       target="_blank">
-                      <span class='glyphicon glyphicon-cloud'></span> View in GitHub
-                    </a>
-                    <a ng-if="project.type == 'cssdeck'"
-                       ng-href='{{project.url}}'
-                       class='btn btn-default btn-xs'
-                       target="_blank">
-                      <span class='glyphicon glyphicon-new-window'></span> View on CSSDeck
-                    </a>
+                  <div class="row">
+                    <div class="col-xs-9 col-sm-7">
+                      {{project.name}}
+                    </div>
+                    <div class="col-xs-3 col-sm-5">
+                      <div class='pull-right'>
+                        <a ng-if="project.type == 'git' && project.filename != undefined"
+                           ng-href='{{idx}}/{{project.filename}}'
+                           class='btn btn-primary btn-xs'>
+                          <span class="visible-xs">
+                            <i class='fa fa-fw fa-download'></i>
+                          </span>
+                          <span class="hidden-xs">
+                            <i class='fa fa-fw fa-download'></i> Direct Download
+                          </span>
+                        </a>
+                        <a ng-if="project.type == 'git'"
+                           ng-href='{{project.gitHubUrl}}'
+                           class='btn btn-default btn-xs'
+                           target="_blank">
+                          <span class="visible-xs">
+                            <i class='fa fa-fw fa-cloud'></i>
+                          </span>
+                          <span class="hidden-xs">
+                            <i class='fa fa-fw fa-cloud'></i> View in GitHub
+                          </span>
+                        </a>
+                        <a ng-if="project.type == 'cssdeck'"
+                           ng-href='{{project.url}}'
+                           class='btn btn-default btn-xs'
+                           target="_blank">
+                          <span class="visible-xs">
+                            <i class='fa fa-fw fa-external-link'></i>
+                          </span>
+                          <span class="hidden-xs">
+                            <i class='fa fa-fw fa-external-link'></i> View on CSSDeck
+                          </span>
+                        </a>
+                        <a ng-if="project.type == 'codepen'"
+                           ng-href='{{project.url}}'
+                           class='btn btn-default btn-xs'
+                           target="_blank">
+                          <span class="visible-xs">
+                            <i class='fa fa-fw fa-codepen'></i>
+                          </span>
+                          <span class="hidden-xs">
+                            <i class='fa fa-fw fa-codepen'></i> View on CSSDeck
+                          </span>
+                        </a>
+                        <a ng-if="project.type == 'image'"
+                           ng-href='{{project.src}}'
+                           class='btn btn-default btn-xs'
+                           target="_blank">
+                          <span class="visible-xs">
+                            <i class='fa fa-fw fa-image'></i>
+                          </span>
+                          <span class="hidden-xs">
+                            <i class='fa fa-fw fa-image'></i> Image
+                          </span>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </li>
               </ul>
