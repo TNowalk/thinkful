@@ -1,0 +1,127 @@
+body {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  color: #222222;
+  font-size: 1em;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #c0392b;
+}
+
+a:hover {
+  color: #e74c3c;
+}
+
+.masthead {
+  padding: 6em 0;
+  border-top: 1em #c0392b solid;
+  background: url(https://ununsplash.imgix.net/uploads/14114036359651bd991f1/b3ed8fdf?q=75&w=1080&h=1080&fit=max&fm=jpg&s=dad85c55ff2872b6a39b1f5d2a834015) no-repeat;
+  background-size: cover;
+}
+
+.masthead-intro,
+.masthead-heading {
+  text-align: center;
+}
+
+.masthead-intro {
+  margin-bottom: 0.1em;
+  color: black;
+  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 2.5em;
+}
+
+.masthead-heading {
+   margin-top: -0.2em;
+   color: #F06556;
+   font-family: "Open Sans", "Helvetica Neue", sans-serif;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 6em;
+   letter-spacing: -0.02em;
+   text-transform: uppercase;
+   text-shadow: 0px 3px 0px #c0392b;
+}
+
+section {
+  max-width: 38em;
+  margin: auto;
+}
+
+.heading {
+  max-width: 19em;
+  margin-top: 2em;
+}
+
+section p {
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+.question {
+  margin: 2em 0 1em 0;
+  color: #c0392b;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.answer {
+  margin-left: 1em;
+}
+
+footer {
+  margin-top: 5em;
+  padding: 4em;
+  background-color: #2c3e50;
+  text-align: center;
+  color: #FFF;
+}
+
+.social-links {
+  padding: 0;
+  list-style: none;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+/** Responsive */
+@media only screen and (max-width: 500px) {
+  .masthead {
+    padding: 3em 0;
+  }
+
+  .masthead-intro {
+    font-size: 1.8em;
+  }
+
+  .masthead-heading {
+    font-size: 3em;
+  }
+
+  .heading {
+    margin: 0.2em 0;
+  }
+
+  section {
+    padding: 0 1em;
+  }
+
+  .question {
+    margin: 0.2em 0 0.1em 0;
+  }
+
+  footer {
+    margin-top: 1em;
+    font-size: .9em;
+    padding: 1em;
+  }
+}
