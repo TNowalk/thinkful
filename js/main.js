@@ -108,6 +108,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '1.5.2/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/1.5.2/index.html'
+      },
+      {
+        name: '1.5.3 - Submitting Your Portfolio',
+        type: 'git',
+        filename: '1.5.3/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/1.5.3/index.html'
       }
     ],
     fewd: [

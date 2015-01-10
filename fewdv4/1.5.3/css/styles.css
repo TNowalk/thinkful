@@ -1,0 +1,353 @@
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+body {
+  line-height: 1; }
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a img {
+  border: none; }
+
+/* =Scss Variables
+-------------------------------------------------------------- */
+/* =Global
+-------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/** #9fdbfc lighter blue => #E65E50 ligher red */
+/** #3cb5f9 light blue => #e74c3c light red */
+/** #505050 dark grey */
+/** #0793e2 dark blue => #c0392b */
+/** #0683c9 darker blue => #A83023 */
+
+body {
+  background-color: #e74c3c;
+  color: #505050;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #e74c3c;
+}
+
+a:hover {
+  color: #c0392b;
+}
+
+/* =Template
+-------------------------------------------------------------- */
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#main {
+  background-color: #fff;
+  padding-top: 150px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+section {
+  padding: 60px 0;
+}
+section h1 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+:target {
+  padding-top: 100px;
+}
+#introduction:target {
+  padding-top: 175px;
+}
+section p {
+  margin-bottom: 30px;
+}
+section p:last-child {
+  margin-bottom: 0;
+}
+section.color {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* =Info Bar
+-------------------------------------------------------------- */
+#info-bar {
+  background-color: #e74c3c;
+  border-top: solid 1px #c0392b;
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+}
+/*
+#info-bar a {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+}
+*/
+#info-bar a:hover {
+  background-color: #c0392b;
+}
+.social-links {
+  padding: 0;
+  list-style: none;
+}
+.social-links li {
+  display: inline-block;
+}
+.social-links a {
+  color: #FFF;
+  padding: 2px 5px;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+header {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: #A83023;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -ms-transition: height 0.3s;
+  -o-transition: height 0.3s;
+  transition: height 0.3s;
+}
+header h1#logo {
+  display: inline-block;
+  height: 150px;
+  line-height: 150px;
+  float: left;
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  color: white;
+  font-weight: 400;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header nav {
+  display: inline-block;
+  float: right;
+}
+header nav a {
+  line-height: 150px;
+  margin-left: 20px;
+  color: #EB6F63;
+  font-weight: 700;
+  font-size: 18px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header nav a:hover {
+  color: white;
+}
+header.smaller {
+  height: 75px;
+}
+header.smaller h1#logo {
+  width: 150px;
+  height: 75px;
+  line-height: 75px;
+  font-size: 30px;
+}
+header.smaller nav a {
+  line-height: 75px;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+/* =Extras
+-------------------------------------------------------------- */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+/* ============================================================
+  FUSION ADS
+============================================================ */
+#fusionads {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 100000;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 12px;
+  line-height: 1.2;
+  -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+#fusionads .fusion-wrap {
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 130px;
+}
+#fusionads a.fusion-text {
+  display: block;
+  color: #646464;
+}
+#fusionads a.fusion-img {
+  display: block;
+  margin-bottom: 10px;
+  width: 130px;
+  height: 100px;
+  background-color: #fff;
+}
+#fusionads a.fusion-img img {
+  display: block;
+  margin: 0 0 10px 0;
+}
+#fusionads a.fusion-poweredby {
+  color: #ff3c50;
+}
+
+#close-fusionad {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 110000;
+  width: 20px;
+  height: 20px;
+  background-color: #505050;
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =Media Queries
+-------------------------------------------------------------- */
+@media all and (max-width: 660px) {
+  /* =Header
+  -------------------------------------------------------------- */
+  header h1#logo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+  }
+  header nav {
+    display: block;
+    float: none;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  header nav a {
+    line-height: 50px;
+    margin: 0 10px;
+  }
+  header.smaller {
+    height: 75px;
+  }
+  header.smaller h1#logo {
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+  }
+  header.smaller nav {
+    height: 35px;
+  }
+  header.smaller nav a {
+    line-height: 35px;
+  }
+}
+@media all and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+
+  #info-bar a {
+    display: block;
+  }
+  #info-bar {
+    border-top: solid 1px #c0392b;
+  }
+}
+
+.question {
+  font-weight: bold;
+}
+
+.answer {
+  margin-left: 1em;
+}
