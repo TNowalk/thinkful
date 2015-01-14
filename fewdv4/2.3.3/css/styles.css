@@ -1,0 +1,106 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.form-holder {
+  padding-top: 100px;
+  width: 450px;
+  margin: auto;
+}
+
+.pull-right {
+  float: right;
+}
+
+.button-holder {
+  margin-top: -42px;
+}
+
+.header {
+  text-align: center;
+  font-weight: normal;
+}
+
+.error-holder div {
+  display: none;
+}
+
+.error-holder div {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+  border-radius: 5px;
+  background: #DEE7FF;
+  padding: 5px 20px;
+}
+
+.shopping-list-holder {
+  width: 950px;
+  margin: 0 auto;
+}
+
+.shopping-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.shopping-list li {
+  display:none;
+  float:left;
+  width:44%;
+  overflow: hidden;
+  height:auto;
+  min-height:10px;
+  background:#FFF;
+  display: inline-block;
+  padding:20px;
+  border:1px solid #CCC;
+  color:#666;
+  border-bottom:9px solid #39D1B4;
+  cursor:pointer;
+  margin-bottom:10px;
+  margin-right:2%;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.shopping-list li.complete {
+  opacity: 0.3;
+  border-bottom: 9px solid #666;
+  transition: all 0.3s;
+}
+
+.shopping-list li:nth-child(even){
+  margin-right: 0;
+}
+.shopping-list li:hover{
+  opacity: 0.8;
+  border-bottom:9px solid #F0553B;
+}
+.shopping-list p{
+  line-height: 1.6em;
+  text-align: left;
+}
+.shopping-list li.complete{
+  opacity:0.3;
+  border-bottom:9px solid #666;
+  transition: all 0.3s;
+
+}
+.shopping-list li.complete:before{
+  position: absolute;
+  top:5px;
+  right:5px;
+  content: "";
+  width: 55px;
+  height: 55px;
+  background-size: 100%;
+}
+.shopping-list li.complete:hover{
+  border-bottom:9px solid #F0553B;
+  opacity:0.6;
+}
+.shopping-list li.complete p{
+  text-decoration: line-through;
+}
