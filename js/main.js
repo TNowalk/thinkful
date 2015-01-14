@@ -132,6 +132,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '2.2/main.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/2.2/'
+      },
+      {
+        name: '2.3 - Shopping List',
+        type: 'git',
+        filename: '2.3/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/2.3/'
       }
     ],
     fewd: [

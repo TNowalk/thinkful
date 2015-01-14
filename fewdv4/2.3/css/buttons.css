@@ -1,0 +1,148 @@
+/* Buttons */
+.btn{
+  background-color: #5677fc;/* Normal: Color 500 */
+  border:0;
+  border-radius: 2px;
+  color: rgba(255,255,255, 0.87);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-style: normal;
+  position: relative;
+  overflow:hidden;
+  padding:12px 27px;
+  -moz-transform: translate3d(0,0,0);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+.btn:hover{
+  color: rgba(255,255,255, 0.87);
+  background-color:#4e6cef; /* Hover: Color 600 */
+}
+.btn:focus,.btn:active:focus,.btn.active:focus{
+  color: rgba(255,255,255, 0.87);
+  outline:none;
+}
+.btn:active{
+  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+}
+.btn.flat{
+  color:#333;
+  background:transparent;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+.btn.flat:focus,.btn.flat:active:focus,.btn.flat.active:focus{
+  color:#333;
+  background-color: #5677fc;/* Normal: Color 500 */
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn{
+  opacity:0.2;
+  color:#333;
+  background-color:#999;
+}
+.btn-sm{
+  font-size: 11px;
+  padding: 4px 10px;
+  line-height: 13px;
+}
+.btn-lg{
+  padding: 20px 26px;
+  font-size: 18px;
+  line-height: 38px;
+}
+
+/* Animations
+------------------------- */
+  /*.ink styles - the elements which will create the ripple effect.
+   * The size and position of these elements will be set by the JS code.
+   * Initially these elements will be scaled down to 0% and later animated to
+   * large fading circles on user click.*/
+  .btn.animate{
+    animation: color_change 0.55s ease-in-out;
+    -webkit-animation: color_change 0.55s ease-in-out;
+  }
+  .ink {
+    display: block;
+    position: absolute;
+    background: #e7e9fd;/* Color: 50 */
+    opacity:0.1;
+    border-radius: 100%;
+    top:0;
+    left:0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  /*animation effect*/
+  .ink.animate {
+    background:#333;
+    opacity:0.4;
+    animation: ripple 0.65s cubic-bezier(.4,0,.2,1);
+    -webkit-animation: ripple 0.65s cubic-bezier(.4,0,.2,1);
+  }
+  .ink.focus{
+    opacity:0.2;
+    animation: ripplefocus 4s infinite;
+    -webkit-animation: ripplefocus 4s infinite;
+  }
+  /* Click Animation for ripple.js */
+  @keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    100% {
+      opacity: 0;
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+  }
+  @-webkit-keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    100% {
+      opacity: 0;
+      transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+    }
+  }
+  /* Click Animation for ripple.js */
+  @keyframes color_change {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    50% {
+      background-color:#455ede;/*blue 700*/
+    }
+  }
+  @-webkit-keyframes color_change {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    50% {
+      background-color:#455ede;/*blue 700*/
+    }
+  }
+
+  /* Focus Animation for ripple.js */
+  @keyframes ripplefocus {
+    /*scale the element infinitly on focus*/
+    0%, 20%, 100% {
+      transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+    }
+    60% {
+      transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+    }
+  }
+  @-webkit-keyframes ripplefocus{
+    0%, 20%, 100% {
+      transform: scale(0.8);
+      -webkit-transform: scale(0.8);
+    }
+    60% {
+      transform: scale(0.9);
+      -webkit-transform: scale(0.9);
+    }
+  }

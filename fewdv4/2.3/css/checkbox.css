@@ -1,0 +1,102 @@
+.polymer {
+}
+
+.polymer input[type=checkbox] {
+  display:none;
+}
+
+.polymer label, p {
+  padding-left:50px;
+}
+
+.polymer #check-awesome {
+  position:relative;
+}
+
+.polymer label {
+  cursor:pointer;
+}
+
+.polymer label span {
+  display:block;
+  position:absolute;
+  right: 10px;
+  top: 20px;
+  -webkit-transition-duration:0.3s;
+  -moz-transition-duration:0.3s;
+  transition-duration:0.3s;
+}
+
+.polymer label .circle {
+  position: absolute;
+  background:#FFF;
+  right: -15px;
+  top: -10px;
+  height:80px;
+  width:80px;
+  z-index:-1;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+}
+
+.polymer label .box {
+  border:2px solid #000;
+  height:20px;
+  width:20px;
+  z-index:888;
+  -webkit-transition-delay:0.2s;
+  -moz-transition-delay:0.2s;
+  transition-delay:0.2s;
+}
+
+.polymer label .check {
+  top: 15px;
+  right: 15px;
+  width: 12px;
+  height: 24px;
+  border:2px solid #0f9d58;
+  border-top: none;
+  border-left: none;
+  opacity:0;
+  z-index:888;
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  transform:rotate(180deg);
+  -webkit-transition-delay:0.3s;
+  -moz-transition-delay:0.3s;
+  transition-delay:0.3s;
+}
+
+.polymer label .circle {
+  -webkit-animation   :growCircle 0.3s ease;
+  -moz-animation      :growCircle 0.3s ease;
+  animation           :growCircle 0.3s ease;
+}
+
+.polymer input[type=checkbox]:checked ~ label .box {
+  opacity:0;
+  -webkit-transform   :scale(0) rotate(-180deg);
+  -moz-transform    :scale(0) rotate(-180deg);
+  transform         :scale(0) rotate(-180deg);
+}
+
+.polymer input[type=checkbox]:checked ~ label .check {
+  opacity:1;
+  -webkit-transform   :scale(1) rotate(45deg);
+  -moz-transform      :scale(1) rotate(45deg);
+  transform           :scale(1) rotate(45deg);
+}
+
+@-webkit-keyframes growCircle {
+  0%, 100%   { -webkit-transform:scale(0); }
+  70%        { background:#DDD; -webkit-transform:scale(1.25); }
+}
+@-moz-keyframes growCircle {
+  0%, 100%   { -moz-transform:scale(0); }
+  70%        { background:#DDD; -moz-transform:scale(1.25); }
+}
+@keyframes growCircle {
+  0%, 100%   { transform:scale(0); }
+  70%        { background:#DDD; transform:scale(1.25); }
+}
