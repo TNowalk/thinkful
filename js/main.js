@@ -114,6 +114,24 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '1.5.3/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/1.5.3/index.html'
+      },
+      {
+        name: '2.1.1 - Hello World with jQuery',
+        type: 'git',
+        filename: '2.1.1/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/2.1.1/'
+      },
+      {
+        name: '2.1.2 - Introducing the DOM',
+        type: 'git',
+        filename: '2.1.2/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/2.1.2/'
+      },
+      {
+        name: '2.2 - Street Fighter',
+        type: 'git',
+        filename: '2.2/main.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/2.2/'
       }
     ],
     fewd: [
