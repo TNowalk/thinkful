@@ -150,6 +150,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '3.1.9/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/3.1.9/'
+      },
+      {
+        name: '3.2.3 - FizzBuzz Refactor: Challenge',
+        type: 'git',
+        filename: '3.2.3/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/3.2.3/'
       }
     ],
     fewd: [
