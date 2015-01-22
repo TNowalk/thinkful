@@ -156,6 +156,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '3.2.3/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/3.2.3/'
+      },
+      {
+        name: '3.2.4 - Hot or Cold App: Challenge',
+        type: 'git',
+        filename: '3.2.4/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/3.2.4/'
       }
     ],
     fewd: [
