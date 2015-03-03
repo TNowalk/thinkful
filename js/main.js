@@ -72,6 +72,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: 'waitstaff/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/waitstaff/index.html'
+      },
+      {
+        name: '1.5.5 - Instagram Searcher',
+        type: 'git',
+        filename: '1.5.5/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/1.5.5/'
       }
     ],
     fewdv4: [

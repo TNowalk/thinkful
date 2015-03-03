@@ -1,0 +1,43 @@
+/* Hide ng-cloak */
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+header {
+  margin-top: 6rem;
+}
+
+header .logo {
+  width: 334px;
+  height: 117px;
+  margin: auto;
+  background: url('../images/ng-instagram.png');
+}
+
+.search-form {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.search-form input {
+  height: 2rem;
+  width: 10rem;
+  border: 2px solid black;
+  margin: 0;
+}
+
+.search-form button {
+  height: 2rem;
+  width: 5rem;
+  border: 2px solid black;
+  background: #FFF;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.search-form.ng-submitted input.ng-invalid {
+  border-color: red;
+}
+
+.tile {
+  margin: 5px auto;
+}
