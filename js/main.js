@@ -78,6 +78,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '1.5.5/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/1.5.5/'
+      },
+      {
+        name: '2.1.1 - Open Weather',
+        type: 'git',
+        filename: '2.1.1/dist/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.1/'
       }
     ],
     fewdv4: [
