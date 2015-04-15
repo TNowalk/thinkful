@@ -1,0 +1,45 @@
+<div id="form-container">
+  <h3>Enter the Meal Details</h3>
+  <form name="mealDetailsForm" ng-submit="submit(); submitted = true;">
+    <p ng-class="{hasError:mealDetailsForm.basePrice.$dirty && !mealDetailsForm.basePrice.$valid}">
+      <label>Base Meal Price: $</label>
+      <input type="number" min="0" name="basePrice" ng-model="data.basePrice" required>
+    </p>
+    <p ng-class="{hasError:mealDetailsForm.taxRate.$dirty && !mealDetailsForm.taxRate.$valid}">
+      <label>Tax Rate: %</label>
+      <input type="number" min="0" name="taxRate" ng-model="data.taxRate" class="sm" required>
+    </p>
+    <p ng-class="{hasError:mealDetailsForm.tipRate.$dirty && !mealDetailsForm.tipRate.$valid}">
+      <label>Tip Percentage: %</label>
+      <input type="number" min="0" name="tipRate" ng-model="data.tipRate" class="sm" required>
+    </p>
+
+    <div class='error' ng-if="myForm.$error && submitted || showError">
+      Please provide valid numbers
+    </div>
+
+    <div class="text-center" id="button-container">
+      <button type="submit" class="button">Submit</button>
+      <button type="button" ng-click="resetDetails()" class="button">Reset</button>
+    </div>
+
+  </form>
+</div>
+
+<div id="customer-charges">
+  <h3>Customer Charges</h3>
+
+  <p>
+    <label>Subtotal</label>
+    {{charges.subTotal | currency: usd}}
+  </p>
+  <p>
+    <label>Tip</label>
+    {{charges.tipTotal | currency: usd}}
+  </p>
+  <hr>
+  <p>
+    <label>Total</label>
+    {{charges.total | currency: usd}}
+  </p>
+</div>
