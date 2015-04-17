@@ -36,6 +36,7 @@
     $('.unanswered-results, .inspiration-results').empty();
   });
 
+  // Event listener for unanswered form submission
   $('.unanswered-getter').on('submit', function() {
     // Stop the browser from submitting the form and refreshing the page
     event.preventDefault();
@@ -57,6 +58,7 @@
     getUnansweredQuestions(tags, '.unanswered-results', displayUnansweredQuestions);
   });
 
+  // Event listener for inspiration form submission
   $('.inspiration-getter').on('submit', function() {
     // Stop the browser from submitting the form and refreshing the page
     event.preventDefault();
@@ -74,6 +76,14 @@
     getInspiration(tag, '.inspiration-results', displayInspiration)
   });
 
+  /**
+   * Gets a list of questions on Stack overflow for the provided tags
+   * that don't have an accepted answer yet
+   * @param  {array}    tags   Array of tags
+   * @param  {string}   target Target HTML selector
+   * @param  {Function} cb     Callback function
+   * @return null
+   */
   var getUnansweredQuestions = function(tags, target, cb) {
     // Show a loading message
     $(target).html(loadingHtml);
@@ -93,16 +103,26 @@
       dataType: 'jsonp',
       type: 'GET'
     }).done(function(res) {
+      // If we got bad results, show error message
       if (res.items == undefined) {
         $(target).html($.templates.error.render({msg: 'Invalid results'}));
       } else {
+        // Otherwise, execute callback function
         cb(tags, target, res.items);
       }
     }).fail(function(xhr, err) {
+      // If the AJAX call failed, show error message
       $(target).html($.templates.error.render({msg: err}));
     });
   };
 
+  /**
+   * Gets a list of top answerers for the provided tag
+   * @param  {string}   tag    Tag name to look up
+   * @param  {string}   target Target HTML selector
+   * @param  {Function} cb     Callback function
+   * @return null
+   */
   var getInspiration = function(tag, target, cb) {
     // Show a loading message
     $(target).html(loadingHtml);
@@ -122,21 +142,32 @@
       dataType: 'jsonp',
       type: 'GET'
     }).done(function(res) {
+      // If we got bad results, show error message
       if (res.items == undefined) {
         $(target).html($.templates.error.render({msg: 'Invalid results'}));
       } else {
+        // Otherwise, execute callback function
         cb(tag, target, res.items);
       }
     }).fail(function(xhr, err) {
+      // If the AJAX call failed, show error message
       $(target).html($.templates.error.render({msg: err}));
     });
   };
 
+  /**
+   * Display the provided questions in the DOM
+   * @param  {array}  tags      Array of tags
+   * @param  {string} target    Target HTML selector
+   * @param  {array}  questions Array of question objects
+   * @return null
+   */
   var displayUnansweredQuestions = function(tags, target, questions) {
     // Template data for questions
     var questionsData = {
       totalResults: questions.length,
-      tags: tags.split(';')
+      tags: tags.split(';'),
+      questions: questions
     };
 
     // Render the questions template
@@ -147,15 +178,15 @@
 
     // Find the .questions element to add the questions to
     var resultTarget = $(target).find('.questions');
-
-    // Loop through each of the questions and display them
-    $.each(questions, function(idx, question) {
-      // Call the displayQuestion function, pass the question and the div
-      // we want to add it to
-      displayQuestion(question, resultTarget);
-    });
   };
 
+  /**
+   * Display the provided answerers in the DOM
+   * @param  {string} tag       The tag that was lookd up
+   * @param  {string} target    Target HTML selector
+   * @param  {array}  answerers Array of answerer objects
+   * @return null
+   */
   var displayInspiration = function(tag, target, answerers) {
     // Template data for inspiration
     var inspirationData = {
@@ -172,29 +203,5 @@
 
     // Create tooltips
     $('[data-toggle="tooltip"]').tooltip()
-  };
-
-  var displayQuestion = function(question, target) {
-    // When looping in jsRender, it's expecting each value in the array
-    // to be an object.  So we ned to set that up
-    var tags = [];
-
-    $.each(question.tags, function(idx, tag) {
-      tags.push({
-        tag: tag
-      });
-    });
-
-    // Overwrite the tags with array of objects instead of array of values
-    question.tags = tags;
-
-    // Set up the moment
-    // var ago = moment().unix(qustion.)
-
-    // Render question template
-    var questionHtml = $.templates.question.render(question);
-
-    // Add it to the target
-    $(target).append(questionHtml);
   };
 })(jQuery);
