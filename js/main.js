@@ -180,6 +180,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '4.1.5/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/4.1.5/'
+      },
+      {
+        name: '4.2.2 - Get Inspired: Challenge',
+        type: 'git',
+        filename: '4.2.2/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/4.2.2/'
       }
     ],
     fewd: [

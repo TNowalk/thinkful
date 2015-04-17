@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4.2.2 - Get Inspired - Challenge</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+
+  <!-- Latest FontAwesome CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- Latest compiled and minified jQuery -->
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- jQuery view and render for templates -->
+  <script src="http://www.jsviews.com/download/jsrender.min.js"></script>
+
+  <!-- MomentJS - Nice date/times -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>StackOverflow Reputation Builder</h1>
+      <p>
+        This app lets you search by topic for unanswered questions on Stack Overflow to help you build your reputation. Find unanswered questions for a topic you know about, write quality answers, and watch your reputation go up.
+      </p>
+
+      <p>
+        Sometimes, you also need some inspiration. This page also lets you search for the top answerers for a tag. If you want to rise to the top ranks for a topic, see how many reputation points you'll need to aim for!
+      </p>
+    </div>
+
+    <div role="tabpanel">
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs nav-justified" role="tablist">
+        <li role="presentation" class="active">
+          <a href="#unanswered" aria-controls="unanswered" role="tab" data-toggle="tab">
+            Unanswered Questions
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#answerers" aria-controls="answerers" role="tab" data-toggle="tab">
+            Top Answerers
+          </a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="unanswered">
+          <br>
+          <div class="text-center alert alert-success">
+            Find unanswered questions by tag. For multiple tags, use a semi-colon to separate.
+          </div>
+
+          <div class="row">
+            <form class="form-horizontal unanswered-getter">
+              <div class="col-xs-6 col-xs-offset-2">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="tags" placeholder="Tags: e.g., 'HTML' or 'HTML;CSS'">
+                </div>
+              </div>
+              <div class="col-xs-2">
+                <button type="submit" class="btn btn-default">Find Questions</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class="unanswered-results"></div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="answerers">
+          <br>
+          <div class="text-center alert alert-info">
+            Find the most reputable answerers for a specific tag.
+          </div>
+
+          <div class="row">
+            <form class="form-horizontal inspiration-getter">
+              <div class="col-xs-6 col-xs-offset-2">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="tag" placeholder="Tag: e.g., 'HTML' or 'CSS'">
+                </div>
+              </div>
+              <div class="col-xs-2">
+                <button type="submit" class="btn btn-default">Find Inspiration</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class="inspiration-results"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Loading Template -->
+  <script id="loading-template" type="text/x-jsrender">
+    <div class="text-center">
+      <i class="fa fa-fw fa-spin fa-circle-o-notch"></i>
+    </div>
+  </script>
+  <!-- Loading Template -->
+
+  <!-- Error Template -->
+  <script id="error-template" type="text/x-jsrender">
+    <div class="alert alert-warning text-center">
+      Uh-oh! Something went wrong with your request. Here is what we know: {{:msg}}
+    </div>
+  </script>
+  <!-- Error Template -->
+
+  <!-- Questions Template -->
+  <script id="questions-template" type="text/x-jsrender">
+    <div>
+      <div class="page-header">
+        <h4>{{:totalResults}} results for <strong>{{:tags}}</strong></h4>
+      </div>
+      <div class="questions"></div>
+    </div>
+  </script>
+  <!-- Questions Template -->
+
+  <!-- Question Template -->
+  <script id="question-template" type="text/x-jsrender">
+    <div class="question">
+      <div class="row">
+        <div class="col-sm-1 hidden-sm hidden-xs box">
+          <div class="reputation">{{:score}}<br>Votes</div>
+        </div>
+        <div class="col-sm-1 hidden-xs box {{if answer_count == 0}}text-danger{{/if}}">
+          <div class="reputation">{{:answer_count}}<br>Answers</div>
+        </div>
+        <div class="col-xs-2 col-sm-1 box">
+          <div class="reputation">{{:view_count}}<br>Views</div>
+        </div>
+        <div class="col-xs-10 col-sm-9">
+          <div>
+            <a href="{{:link}}" target="_blank">{{:title}}</a>
+          </div>
+          <div>
+            {{for tags}}
+            <span class="label label-primary">{{:tag}}</span>
+            {{/for}}
+
+            <span class="pull-right">
+              Asked {{ago:creation_date}}
+              by <a href="{{:owner.link}}" target="_blank">{{:owner.display_name}}</a>
+              <strong>{{:owner.reputation}}</strong>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- Question Template -->
+
+  <!-- Inspiration Template -->
+  <script id="inspiration-template" type="text/x-jsrender">
+    <div>
+      <div class="page-header">
+        <h4>{{:totalResults}} results for <strong>{{toUpperCase:tag}}</strong></h4>
+      </div>
+      <div class="row">
+        {{for answerers tmpl="#answerer-template"}}{{/for}}
+      </div>
+    </div>
+  </script>
+  <!-- Inspiration Template -->
+
+  <!-- Answerer Template -->
+  <script id="answerer-template" type="text/x-jsrender">
+    <div class="answerer col-xs-6 col-sm-4 col-md-3">
+      <div class="row">
+        <div class="col-xs-4">
+          <img src="{{:user.profile_image}}" class="img-responsive img-circle">
+        </div>
+        <div class="col-xs-8">
+          <div><a href="{{:user.link}}" target="_blank">{{:user.display_name}}</a></div>
+          <div class="row">
+            <div class="col-xs-4 text-center" data-toggle="tooltip" data-placement="bottom" title="Reputation">
+              <strong>{{kFormat:user.reputation}}</strong>
+            </div>
+            <div class="col-xs-4 text-center" data-toggle="tooltip" data-placement="bottom" title="Score">
+              {{kFormat:score}}
+            </div>
+            <div class="col-xs-4 text-center" data-toggle="tooltip" data-placement="bottom" title="Posts">
+              {{kFormat:post_count}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+  <!-- Answerer Template -->
+
+  <script src="js/app.js"></script>
+</body>
+</html>
