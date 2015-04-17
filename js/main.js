@@ -176,10 +176,10 @@ angular.module('ThinkfulProjects')
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/3.2.4/'
       },
       {
-        name: '5.1.5 - Thinkful Tube: Challenge',
+        name: '4.1.5 - Thinkful Tube: Challenge',
         type: 'git',
-        filename: '5.1.5/',
-        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/5.1.5/'
+        filename: '4.1.5/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/4.1.5/'
       }
     ],
     fewd: [
