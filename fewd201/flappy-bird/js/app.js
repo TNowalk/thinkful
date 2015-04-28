@@ -15,10 +15,14 @@ var BirdGraphicsComponent = function(entity) {
   this.entity = entity;
 };
 
-BirdGraphicsComponent.prototype.draw = function(context) {
+BirdGraphicsComponent.prototype.draw = function(context, position, size) {
+  context.save();
+  context.translate(position.x, position.y);
+  context.scale(size, size);
   context.beginPath();
-  context.arc(50, 50, 10, 0, 2 * Math.PI);
+  context.arc(0, 0, 1, 0, 2 * Math.PI);
   context.fill();
+  context.restore();
 };
 
 exports.BirdGraphicsComponent = BirdGraphicsComponent;
@@ -107,6 +111,10 @@ GraphicsSystem.prototype.tick = function() {
   // Clear the canvas
   this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+  this.context.save();
+  this.context.translate(this.canvas.width / 2, this.canvas.height);
+  this.context.scale(this.canvas.height, -this.canvas.height);
+
   for (var i = 0; i < this.entities.length; i++) {
     var entity = this.entities[i];
 
@@ -116,6 +124,8 @@ GraphicsSystem.prototype.tick = function() {
 
     entity.components.graphics.draw(this.context);
   }
+
+  this.context.restore();
 
   // Continue the render loop
   window.requestAnimationFrame(this.tick.bind(this));
