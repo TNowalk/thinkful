@@ -1,7 +1,8 @@
 'use strict';
 
-var graphicsComponent = require('../components/graphics/pipe');
-var physicsComponent = require('../components/physics/physics');
+var PipeGraphicsComponent = require('../components/graphics/pipe');
+var PhysicsComponent = require('../components/physics/physics');
+var CollisionComponent = require('../components/collision/rect');
 
 var Pipe = function(width, height, top) {
   this.size = {
@@ -10,8 +11,9 @@ var Pipe = function(width, height, top) {
   };
 
   this.components = {
-    graphics: new graphicsComponent.PipeGraphicsComponent(this),
-    physics: new physicsComponent.PhysicsComponent(this)
+    graphics: new PipeGraphicsComponent(this),
+    physics: new PhysicsComponent(this),
+    collision: new CollisionComponent(this, {width: width, height: height})
   };
 
   var x = 1;
@@ -25,6 +27,12 @@ var Pipe = function(width, height, top) {
   this.components.physics.position.y = y;
 
   this.components.physics.velocity.x = -0.4;
+
+  this.components.collision.onCollision = this.onCollision.bind(this);
 };
 
-exports.Pipe = Pipe;
+Pipe.prototype.onCollision = function(entity) {
+  // console.log('Pipe collided with entity', entity);
+};
+
+module.exports = Pipe;

@@ -45,4 +45,4 @@ GraphicsSystem.prototype.tick = function() {
   window.requestAnimationFrame(this.tick.bind(this));
 };
 
-exports.GraphicsSystem = GraphicsSystem;
+module.exports = GraphicsSystem;

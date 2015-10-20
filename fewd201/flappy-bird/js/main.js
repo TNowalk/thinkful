@@ -1,9 +1,9 @@
 'use strict';
 
-var flappyBird = require('./flappy_bird');
+var FlappyBird = require('./flappy_bird');
 
 document.addEventListener('DOMContentLoaded', function() {
-  var app = new flappyBird.FlappyBird();
+  var app = new FlappyBird();
 
   app.run();
 });

@@ -1,6 +1,6 @@
 'use strict';
 
-var pipe = require('../entities/pipe');
+var Pipe = require('../entities/pipe');
 
 var PipeSystem = function(entities) {
   this.entities = entities;
@@ -16,8 +16,8 @@ PipeSystem.prototype.run = function() {
 PipeSystem.prototype.tick = function() {
   var gap = 0.4 + Math.random() * 0.2;
 
-  this.entities.push(new pipe.Pipe(0.1, gap));
-  this.entities.push(new pipe.Pipe(0.1, 1 - (gap + 0.3), true));
+  this.entities.push(new Pipe(0.1, gap));
+  //this.entities.push(new Pipe(0.1, 1 - (gap + 0.3), true));
 };
 
-exports.PipeSystem = PipeSystem;
+module.exports = PipeSystem;

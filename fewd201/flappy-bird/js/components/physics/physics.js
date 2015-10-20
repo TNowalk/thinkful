@@ -16,4 +16,4 @@ PhysicsComponent.prototype.update = function(delta) {
   this.position.y += this.velocity.y * delta;
 };
 
-exports.PhysicsComponent = PhysicsComponent;
+module.exports = PhysicsComponent;

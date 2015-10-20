@@ -15,4 +15,4 @@ BirdGraphicsComponent.prototype.draw = function(context) {
   context.restore();
 };
 
-exports.BirdGraphicsComponent = BirdGraphicsComponent;
+module.exports = BirdGraphicsComponent;

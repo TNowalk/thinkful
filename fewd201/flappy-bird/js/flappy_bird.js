@@ -1,19 +1,19 @@
 'use strict';
 
-var graphicsSystem = require('./systems/graphics');
-var physicsSystem = require('./systems/physics');
-var inputSystem = require('./systems/input');
-var pipeSystem = require('./systems/pipes');
+var GraphicsSystem = require('./systems/graphics');
+var PhysicsSystem = require('./systems/physics');
+var InputSystem = require('./systems/inputs');
+var PipeSystem = require('./systems/pipes');
 
-var bird = require('./entities/bird');
+var Bird = require('./entities/bird');
 
 var FlappyBird = function() {
-  this.entities = [new bird.Bird()];
+  this.entities = [new Bird()];
 
-  this.graphics = new graphicsSystem.GraphicsSystem(this.entities);
-  this.physics = new physicsSystem.PhysicsSystem(this.entities);
-  this.inputs = new inputSystem.InputSystem(this.entities);
-  this.pipes = new pipeSystem.PipeSystem(this.entities);
+  this.graphics = new GraphicsSystem(this.entities);
+  this.physics = new PhysicsSystem(this.entities);
+  this.inputs = new InputSystem(this.entities);
+  this.pipes = new PipeSystem(this.entities);
 };
 
 FlappyBird.prototype.run = function() {
@@ -23,4 +23,4 @@ FlappyBird.prototype.run = function() {
   this.pipes.run();
 };
 
-exports.FlappyBird = FlappyBird;
+module.exports = FlappyBird;

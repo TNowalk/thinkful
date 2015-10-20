@@ -15,4 +15,4 @@ PipeGraphicsComponent.prototype.draw = function(context) {
   context.restore();
 };
 
-exports.PipeGraphicsComponent = PipeGraphicsComponent;
+module.exports = PipeGraphicsComponent;
