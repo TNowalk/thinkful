@@ -186,6 +186,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '4.2.2/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/4.2.2/'
+      },
+      {
+        name: '4.3.4 - API Hack',
+        type: 'git',
+        filename: '4.3.4/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/4.3.4/'
       }
     ],
     fewd: [
