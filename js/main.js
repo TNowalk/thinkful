@@ -84,6 +84,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '2.1.1/dist/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.1/'
+      },
+      {
+        name: '2.2.3 - Countries and Captials App',
+        type: 'git',
+        filename: '2.2.3/dist/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.2.3/'
       }
     ],
     fewdv4: [

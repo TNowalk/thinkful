@@ -1,0 +1,36 @@
+.country {
+
+  .details {
+    width: 350px;
+    margin: 0 auto;
+
+    div {
+      margin: 5px 0;
+    }
+
+    .neighbors {
+      display: inline-block;
+      width: 190px;
+      margin: 0;
+    }
+  }
+
+  label {
+    display: inline-block;
+    float: left;
+    width: 140px;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
+  .images {
+    margin: 40px auto;
+
+    img {
+      width: 250px;
+      height: 136px;
+      padding: 10px;
+    }
+  }
+}
