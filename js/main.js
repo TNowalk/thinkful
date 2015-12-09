@@ -88,7 +88,7 @@ angular.module('ThinkfulProjects')
       {
         name: '2.2.3 - Countries and Captials App',
         type: 'git',
-        filename: '2.2.3/dist/index.html',
+        filename: '2.2.3/dist/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.2.3/'
       }
     ],
