@@ -86,6 +86,12 @@ angular.module('ThinkfulProjects')
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.1/'
       },
       {
+        name: '2.1.2 - Open Weather Map: Animating Route Changes',
+        type: 'git',
+        filename: '2.1.2/dist/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.2/'
+      },
+      {
         name: '2.1.3 - Add Routes to Waitstaff Tool',
         type: 'git',
         filename: '2.1.3/dist/',

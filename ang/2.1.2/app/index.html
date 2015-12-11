@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="OWMApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Open Weather</title>
+
+  <!-- build:css css/styles.css -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- endbuild -->
+</head>
+<body ng-class="{loading: isLoading}">
+  <a href="#/cities/New%20York">New York</a>
+  <a href="#/cities/Dallas">Dallas</a>
+  <a href="#/cities/Chicago">Chicago</a>
+
+  <!-- View -->
+  <div class="animate-view-container">
+    <div ng-view class="animate-view"></div>
+  </div>
+
+  <!-- build:vendor js/vendor.js -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/app.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
