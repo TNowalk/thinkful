@@ -1,0 +1,26 @@
+<div id="result-container">
+
+
+  <div id="my-earnings">
+    <h3>My Earnings Info</h3>
+
+    <p>
+      <label>Tip Total: </label>
+      {{earnings.tipTotal | currency: usd}}
+    </p>
+    <p>
+      <label>Meal Count: </label>
+      {{earnings.mealCount | number}}
+    </p>
+    <p>
+      <label>Average Tip Per Meal: </label>
+      {{calculateAverage(earnings.tipTotal, earnings.mealCount) | currency: usd}}
+    </p>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="text-center container">
+  <button type="button" ng-click="refresh()" class="button">Reset</button>
+</div>

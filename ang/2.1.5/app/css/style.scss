@@ -1,0 +1,145 @@
+body, html {
+  position:relative; min-height:100%;
+}
+
+.container {
+  width: 750px;
+  margin: 20px auto;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.button {
+  padding: 5px 15px;
+  border: 1px solid #000;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  background: #FFF;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #F3F3F3;
+}
+
+.button:active {
+  border-width: 1px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+label {
+  display: inline-block;
+  float: left;
+  text-align: right;
+  width: 180px;
+  margin-right: 5px;
+}
+
+input[type=number] {
+  border: 1px solid black;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+input.sm {
+  width: 50px;
+}
+
+.hasError input {
+  border-color: red;
+}
+
+h3 {
+  border-bottom: 2px solid black;
+  padding: 8px 15px;
+  font-weight: normal;
+  margin: 0;
+  font-size: 1.1em;
+}
+
+.error {
+  text-align: center;
+  margin-bottom: -35px;
+  color: red;
+}
+
+header {
+  text-align: center;
+}
+
+#form-container,
+#customer-charges {
+  width: 360px;
+  margin: 10px auto;
+  border: 2px solid black;
+}
+
+#button-container {
+  margin: 5px;
+}
+
+#result-container {
+  width: 360px;
+  margin: 10px auto;
+}
+
+#result-container div {
+  height: 163px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
+#customer-charges hr {
+  border: 1px solid black;
+  color: black;
+  margin: 5px;
+  width: 200px;
+  margin: auto;
+}
+
+.content {
+  margin-top: 20px;
+  position:relative;
+  min-height: 100%;
+}
+
+/** Start Animations */
+.animate-view.ng-enter,
+.animate-view.ng-leave {
+  transition:1s linear all;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:#eee;
+}
+.animate-view.ng-enter {
+  opacity:0;
+  z-index:100;
+  top: 0;
+}
+.animate-view.ng-enter.ng-enter-active {
+  opacity:1;
+  top: 0;
+}
+.animate-view.ng-leave {
+  opacity:1;
+  z-index:99;
+  top: 0;
+}
+.animate-view.ng-leave.ng-leave-active {
+  opacity:0;
+  top: -1000px;
+}

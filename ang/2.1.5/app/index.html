@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WaitstaffApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Waitstaff Tool - Routes</title>
+
+  <!-- build:css css/style.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+
+  <div class="container">
+    <header>
+      <h1>Waitstaff Calculator</h1>
+
+      <a href="#/">Home</a> |
+      <a href="#/new-meal">New Meal</a> |
+      <a href="#/my-earnings">My Earnings</a>
+    </header>
+
+    <section class="content">
+      <!-- View -->
+      <div ng-view class="animate-view"></div>
+    </section>
+  </div>
+
+  <!-- build:vendor js/vendor.js -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/app.js -->
+  <script src="js/app.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
