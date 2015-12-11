@@ -88,7 +88,7 @@ angular.module('ThinkfulProjects')
       {
         name: '2.1.3 - Add Routes to Waitstaff Tool',
         type: 'git',
-        filename: '2.1.3/dist/index.html',
+        filename: '2.1.3/dist/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.3/'
       },
       {
