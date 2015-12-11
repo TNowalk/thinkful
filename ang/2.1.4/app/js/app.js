@@ -1,10 +1,20 @@
 'use strict';
 
-angular.module('OWMApp', ['ngRoute']);
+angular.module('OWMApp', ['ngRoute', 'ngAnimate']);
 
 angular.module('OWMApp').value('owmCities', ['New York', 'Dallas', 'Chicago']);
 
-angular.module('OWMApp').run(['$rootScope', '$location', function($rootScope, $location) {
+angular.module('OWMApp').run(['$rootScope', '$location', '$timeout', function($rootScope, $location, $timeout) {
+  $rootScope.$on('$routeChangeStart', function() {
+    $rootScope.isLoading = true;
+  });
+
+  $rootScope.$on('$routeChangeSuccess', function() {
+    $timeout(function() {
+      $rootScope.isLoading = false;
+    }, 1000);
+  });
+
   $rootScope.$on('$routeChangeError', function() {
     $location.path('/error');
   });

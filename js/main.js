@@ -80,13 +80,7 @@ angular.module('ThinkfulProjects')
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/1.5.5/'
       },
       {
-        name: '2.1.1 - Open Weather',
-        type: 'git',
-        filename: '2.1.1/dist/index.html',
-        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.1/'
-      },
-      {
-        name: '2.1.2 - Open Weather Map: Animating Route Changes',
+        name: '2.1.2 - Open Weather',
         type: 'git',
         filename: '2.1.2/dist/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.2/'
@@ -96,6 +90,18 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '2.1.3/dist/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.3/'
+      },
+      {
+        name: '2.1.4 - Open Weather Map: Animating Route Changes',
+        type: 'git',
+        filename: '2.1.4/dist/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.4/'
+      },
+      {
+        name: '2.1.5 - Animate Waitstaff Tool',
+        type: 'git',
+        filename: '2.1.5/dist/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.5/'
       },
       {
         name: '2.2.3 - Countries and Captials App',
