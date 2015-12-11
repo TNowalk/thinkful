@@ -18,8 +18,8 @@ var gulp     = require('gulp'),
   },
 
   dest = {
-    build: 'dest/',
-    html: 'dest/',
+    build: 'dist/',
+    html: 'dist/',
     css: 'app/css/',
     js: 'app/js/'
   };

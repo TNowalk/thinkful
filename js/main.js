@@ -68,7 +68,7 @@ angular.module('ThinkfulProjects')
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/multiply/v2/index.html'
       },
       {
-        name: 'Waitstaff Calculator',
+        name: '1.3.6 - Waitstaff Calculator',
         type: 'git',
         filename: 'waitstaff/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/waitstaff/index.html'
@@ -84,6 +84,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '2.1.1/dist/index.html',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.1/'
+      },
+      {
+        name: '2.1.3 - Add Routes to Waitstaff Tool',
+        type: 'git',
+        filename: '2.1.3/dist/index.html',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.1.3/'
       },
       {
         name: '2.2.3 - Countries and Captials App',

@@ -83,7 +83,8 @@ angular.module('InstagramSearcher').factory('InstagramService', ['$q', '$http', 
       var config = {
         params: {
           callback: 'JSON_CALLBACK',
-          client_id: '2986d0941e7f430db5544c19f30adbe3'
+          // client_id: '2986d0941e7f430db5544c19f30adbe3'
+          client_id: 'b6589664a237471a9c07a80e2709dc98'
         }
       };
 

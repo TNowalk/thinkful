@@ -6,6 +6,13 @@ angular.module('WaitstaffApp').run(['$rootScope', '$location', function($rootSco
   $rootScope.$on('$routeChangeError', function() {
     $location.path('/error');
   });
+
+  $rootScope.defaultEarnings = {
+    tipTotal: 0.00,
+    mealCount: 0
+  };
+
+  $rootScope.earnings = angular.copy($rootScope.defaultEarnings);
 }]);
 
 angular.module('WaitstaffApp').config(['$routeProvider', function($routeProvider) {
@@ -14,10 +21,12 @@ angular.module('WaitstaffApp').config(['$routeProvider', function($routeProvider
       templateUrl: 'partials/home.html'
     })
     .when('/new-meal', {
-      templateUrl: 'partials/new-meal.html'
+      templateUrl: 'partials/new-meal.html',
+      controller: 'NewMealCtrl'
     })
     .when('/my-earnings', {
-      templateUrl: 'partials/my-earnings.html'
+      templateUrl: 'partials/my-earnings.html',
+      controller: 'EarningsCtrl'
     })
     .when('/error', {
       template : '<p>Error - Page Not Found</p>'
@@ -25,7 +34,7 @@ angular.module('WaitstaffApp').config(['$routeProvider', function($routeProvider
     .otherwise('/error');
 }]);
 
-angular.module('WaitstaffApp').controller('MainCtrl', ['$scope', function($scope) {
+angular.module('WaitstaffApp').controller('NewMealCtrl', ['$rootScope', '$scope', function($rootScope, $scope) {
   $scope.submitted = false;
   $scope.showError = false;
 
@@ -39,14 +48,7 @@ angular.module('WaitstaffApp').controller('MainCtrl', ['$scope', function($scope
     total: 0.00
   };
 
-  var defaultEarnings = {
-    tipTotal: 0.00,
-    mealCount: 0
-  };
-
   $scope.charges = angular.copy(defaultCharges);
-
-  $scope.earnings = angular.copy(defaultEarnings);
 
   $scope.submit = function() {
     if (!$scope.mealDetailsForm.$valid) {
@@ -73,28 +75,6 @@ angular.module('WaitstaffApp').controller('MainCtrl', ['$scope', function($scope
     $scope.mealDetailsForm.$setPristine();
   };
 
-  $scope.refresh = function() {
-    $scope.resetDetails();
-    resetCharges();
-    resetEarnings();
-  };
-
-  /**
-   * Reset the meal details
-   * @return {null}
-   */
-  var resetCharges = function() {
-    $scope.charges = angular.copy(defaultCharges);
-  };
-
-  /**
-   * Reset the earnings
-   * @return {null}
-   */
-  var resetEarnings = function() {
-    $scope.earnings = angular.copy(defaultEarnings);
-  };
-
   /**
    * Calculate the total bill
    * @return {null}
@@ -108,12 +88,34 @@ angular.module('WaitstaffApp').controller('MainCtrl', ['$scope', function($scope
   };
 
   /**
+   * Reset the meal details
+   * @return {null}
+   */
+  var resetCharges = function() {
+    $scope.charges = angular.copy(defaultCharges);
+  };
+
+  /**
    * Calculate earnings
    * @return {null}
    */
   var calculateEarnings = function() {
-    $scope.earnings.tipTotal += $scope.charges.tipTotal;
-    $scope.earnings.mealCount++;
+    $rootScope.earnings.tipTotal += $scope.charges.tipTotal;
+    $rootScope.earnings.mealCount++;
+  };
+}]);
+
+angular.module('WaitstaffApp').controller('EarningsCtrl', ['$rootScope', '$scope', function($rootScope, $scope) {
+  $scope.refresh = function() {
+    resetEarnings();
+  };
+
+  /**
+   * Reset the earnings
+   * @return {null}
+   */
+  var resetEarnings = function() {
+    $rootScope.earnings = angular.copy($rootScope.defaultEarnings);
   };
 
   /**
