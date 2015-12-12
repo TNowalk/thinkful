@@ -1,0 +1,36 @@
+<div class="country container">
+  <div class="text-center" ng-show="loading">
+    Loading Country Data...
+  </div>
+
+  <div ng-show="!loading">
+    <div class="details">
+      <h2>{{country.countryName}}</h2>
+
+      <div>
+        <div><label>Population of Country:</label> {{country.population | number}}</div>
+        <div><label>Area:</label> {{country.areaInSqKm | number}} sq km</div>
+        <div><label>Capital:</label> {{capital.name || 'N/A'}}</div>
+        <div><label>Population of Captial:</label> {{capital.population || 0 | number}}</div>
+        <div>
+          <label>{{neighbors.length || 0}} Neighbor<span ng-show="neighbors.length !== 1">s</span>:</label>
+          <div class="neighbors">
+            <span ng-repeat="neighbor in neighbors | orderBy:'countryName'">
+              <a ng-href="#/countries/{{neighbor.countryCode}}/capital">{{neighbor.countryName}}</a>{{$last ? '' : ', '}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center images">
+      <img ng-src="{{map(country.countryCode)}}">
+      <img ng-src="{{flag(country.countryCode)}}">
+    </p>
+
+    <p class="text-center">
+      <a class="btn" href="#/">Home</a>
+      <a class="btn" href="#/countries">Browse Countries</a>
+    </p>
+  </div>
+</div>

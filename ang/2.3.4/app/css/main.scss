@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
+
+body {
+  font-family: 'Arimo', sans-serif;
+  width: 100%;
+  margin: 0;
+
+  th {
+    text-align: left;
+  }
+
+  header {
+    h1 {
+      padding-bottom: 10px;
+      border-bottom: 1px solid black;
+      font-weight: 500;
+    }
+  }
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    .container {
+      font-size: 0.75em;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  a.btn {
+    color: #000;
+    text-decoration: none;
+    width: 100px;
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid #000;
+    border-width: 1px 2px 2px 1px;
+    -webkit-box-shadow: 2px 2px 1px #000;
+    -moz-box-shadow: 2px 2px 1px #000;
+    box-shadow: 2px 2px 1px #000;
+  }
+
+  a.btn:hover {
+    border-width: 2px 1px 1px 2px;
+  }
+
+  a.btn:visited, a.btn:active {
+    color: #000;
+  }
+}

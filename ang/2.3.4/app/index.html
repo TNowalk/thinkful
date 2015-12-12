@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CountriesApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Countries &amp; Capitals App</title>
+
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+
+  <div class='container'>
+    <header>
+      <h1 class="text-center">Countries &amp; Capitals</h1>
+    </header>
+
+    <section class="content">
+      <!-- View -->
+      <div ng-view></div>
+    </section>
+  </div>
+
+  <!-- build:vendor js/vendor.js -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/app.js -->
+  <script src="js/app.module.js"></script>
+  <script src="js/countries/countries.js"></script>
+  <script src="js/countries/countries.factory.js"></script>
+  <script src="js/countries/countries.controller.js"></script>
+  <script src="js/country/country.js"></script>
+  <script src="js/country/country.factory.js"></script>
+  <script src="js/country/country.controller.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

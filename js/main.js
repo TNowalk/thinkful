@@ -108,6 +108,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '2.2.3/dist/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.2.3/'
+      },
+      {
+        name: '2.3.4 - Writing Tests for Countries and Captials App',
+        type: 'git',
+        filename: '2.3.4/dist/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.3.4/'
       }
     ],
     fewdv4: [

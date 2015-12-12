@@ -1,0 +1,34 @@
+<div class="container countries">
+  <div class="text-center" ng-show="loading">
+    Loading Countries...
+  </div>
+
+  <div ng-show="!loading">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th class="text-center">Country Code</th>
+          <th>Capital</th>
+          <th class="text-right">Area in Sq km</th>
+          <th class="text-right">Population</th>
+          <th class="text-center">Continent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="country in countries | orderBy:'countryName'" ng-click="goToCountry(country)">
+          <td>{{country.countryName}}</td>
+          <td class="text-center">{{country.countryCode}}</td>
+          <td>{{country.capital}}</td>
+          <td class="text-right">{{country.areaInSqKm | number}}</td>
+          <td class="text-right">{{country.population | number}}</td>
+          <td class="text-center">{{country.continent}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="text-center">
+      <a class="btn" href="#/">Home</a>
+    </p>
+  </div>
+</div>
