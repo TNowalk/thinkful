@@ -6,6 +6,7 @@ describe('Countries Controller', function() {
   beforeEach(module('CountriesApp'));
 
   beforeEach(inject(function($controller, $rootScope, _$location_, _CountriesFactory_) {
+    // The injector unwraps the underscores (_) from around the parameter names when matching
     scope = $rootScope.$new();
     $location = _$location_;
     CountriesFactory = _CountriesFactory_;

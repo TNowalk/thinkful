@@ -114,6 +114,12 @@ angular.module('ThinkfulProjects')
         type: 'git',
         filename: '2.3.4/dist/',
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/2.3.4/'
+      },
+      {
+        name: '3.1.2 - Simple Signup Form',
+        type: 'git',
+        filename: '3.1.2/dist/',
+        gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/ang/3.1.2/'
       }
     ],
     fewdv4: [

@@ -113,11 +113,6 @@ var countryFactoryNeighborsResponse = {
 describe('Country Factory', function() {
   beforeEach(module('CountriesApp'));
 
-  beforeEach(inject(function($httpBackend) {
-
-
-  }));
-
   it('should query GEONAMES for a single country', inject(function(CountryFactory, $rootScope, $httpBackend) {
     $httpBackend.expect('GET', 'http://api.geonames.org/countryInfoJSON?country=US&username=tnowalk').respond(countryFactoryGetResponse);
     var country = null;

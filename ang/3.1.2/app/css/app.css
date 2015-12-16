@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
+body {
+  font-family: 'Arimo', sans-serif; }
+  body header, body footer {
+    width: 650px;
+    margin: 20px auto; }
+  body h1 {
+    font-weight: 500; }
+  body .container {
+    width: 650px;
+    margin: auto; }
+    body .container .brand-logo {
+      background: url(http://placehold.it/150x175);
+      width: 150px;
+      height: 175px; }
+  body .pull-left {
+    float: left; }
+  body .pull-right {
+    float: right; }
+  body .clear-fix {
+    clear: both; }
+  body .text-right {
+    text-align: right; }
+
+
+.form-holder {
+  width: 400px;
+  margin-left: 50px;
+  margin-top: 25px; }
+  .form-holder input {
+    width: 94%;
+    border: 1px solid #000;
+    line-height: 2em;
+    padding: 3px 11px; }
+  .form-holder button {
+    text-decoration: none;
+    width: 100%;
+    padding: 5px 10px;
+    text-align: center;
+    background: #FFF;
+    border: 1px solid #000;
+    border-width: 1px 2px 2px 1px;
+    -webkit-box-shadow: 2px 2px 1px #000;
+    -moz-box-shadow: 2px 2px 1px #000;
+    box-shadow: 2px 2px 1px #000; }
+  .form-holder button:hover {
+    cursor: pointer;
+    border-width: 2px 1px 1px 2px; }
+  .form-holder .half {
+    width: 50%; }
+    .form-holder .half input {
+      width: 80%; }
+
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNzcy9tYWluLnNjc3MiLCJqcy9vcHQtaW4vb3B0LWluLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsQUFFQTtFQUNFLEFBQWE7RUFFZixBQUFLLEFBQVEsQUFBSztJQUNkLEFBQU87SUFDUCxBQUFRO0VBR1osQUFBSztJQUNELEFBQWE7RUFHakIsQUFBSztJQUNELEFBQU87SUFDUCxBQUFRO0lBRVosQUFBSyxBQUFXO01BQ1YsQUFBWTtNQUNaLEFBQU87TUFDUCxBQUFRO0VBSWQsQUFBSztJQUNELEFBQU87RUFHWCxBQUFLO0lBQ0QsQUFBTztFQUdYLEFBQUs7SUFDRCxBQUFPO0VBR1gsQUFBSztJQUNELEFBQVk7Ozs7QUN0Q2hCO0VBQ0UsQUFBTztFQUNQLEFBQWE7RUFDYixBQUFZO0VBRWQsQUFBYTtJQUNULEFBQU87SUFDUCxBQUFRO0lBQ1IsQUFBYTtJQUNiLEFBQVM7RUFHYixBQUFhO0lBQ1QsQUFBaUI7SUFDakIsQUFBTztJQUNQLEFBQVM7SUFDVCxBQUFZO0lBQ1osQUFBWTtJQUNaLEFBQVE7SUFDUixBQUFjO0lBQ2QsQUFBb0I7SUFDcEIsQUFBaUI7SUFDakIsQUFBWTtFQUdoQixBQUFhLEFBQU07SUFDZixBQUFRO0lBQ1IsQUFBYztFQUdsQixBQUFhO0lBQ1QsQUFBTztJQUVYLEFBQWEsQUFBTTtNQUNiLEFBQU8iLCJmaWxlIjoiYXBwLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgdXJsKGh0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzP2ZhbWlseT1Bcmltbzo0MDAsNzAwKTtcblxuYm9keSB7XG4gIGZvbnQtZmFtaWx5OiAnQXJpbW8nLCBzYW5zLXNlcmlmO1xuXG4gIGhlYWRlcixmb290ZXIge1xuICAgIHdpZHRoOiA2NTBweDtcbiAgICBtYXJnaW46IDIwcHggYXV0bztcbiAgfVxuXG4gIGgxIHtcbiAgICBmb250LXdlaWdodDogNTAwO1xuICB9XG5cbiAgLmNvbnRhaW5lciB7XG4gICAgd2lkdGg6IDY1MHB4O1xuICAgIG1hcmdpbjogYXV0bztcblxuICAgIC5icmFuZC1sb2dvIHtcbiAgICAgIGJhY2tncm91bmQ6IHVybChodHRwOi8vcGxhY2Vob2xkLml0LzE1MHgxNzUpO1xuICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgaGVpZ2h0OiAxNzVweDtcbiAgICB9XG4gIH1cblxuICAucHVsbC1sZWZ0IHtcbiAgICBmbG9hdDogbGVmdDtcbiAgfVxuXG4gIC5wdWxsLXJpZ2h0IHtcbiAgICBmbG9hdDogcmlnaHQ7XG4gIH1cblxuICAuY2xlYXItZml4IHtcbiAgICBjbGVhcjogYm90aDtcbiAgfVxuXG4gIC50ZXh0LXJpZ2h0IHtcbiAgICB0ZXh0LWFsaWduOiByaWdodDtcbiAgfVxufSIsIi5mb3JtLWhvbGRlciB7XG4gIHdpZHRoOiA0MDBweDtcbiAgbWFyZ2luLWxlZnQ6IDUwcHg7XG4gIG1hcmdpbi10b3A6IDI1cHg7XG5cbiAgaW5wdXQge1xuICAgIHdpZHRoOiA5NCU7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzAwMDtcbiAgICBsaW5lLWhlaWdodDogMmVtO1xuICAgIHBhZGRpbmc6IDNweCAxMXB4O1xuICB9XG5cbiAgYnV0dG9uIHtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogNXB4IDEwcHg7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGJhY2tncm91bmQ6ICNGRkY7XG4gICAgYm9yZGVyOiAxcHggc29saWQgIzAwMDtcbiAgICBib3JkZXItd2lkdGg6IDFweCAycHggMnB4IDFweDtcbiAgICAtd2Via2l0LWJveC1zaGFkb3c6IDJweCAycHggMXB4ICMwMDA7XG4gICAgLW1vei1ib3gtc2hhZG93OiAycHggMnB4IDFweCAjMDAwO1xuICAgIGJveC1zaGFkb3c6IDJweCAycHggMXB4ICMwMDA7XG4gIH1cblxuICBidXR0b246aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItd2lkdGg6IDJweCAxcHggMXB4IDJweDtcbiAgfVxuXG4gIC5oYWxmIHtcbiAgICB3aWR0aDogNTAlO1xuXG4gICAgaW5wdXQge1xuICAgICAgd2lkdGg6IDgwJTtcbiAgICB9XG4gIH1cbn0iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

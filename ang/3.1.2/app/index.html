@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SignUpApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Signup Form - Directives</title>
+
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+  <header>
+    <h1>Acme Inc.</h1>
+  </header>
+
+  <div class="container">
+    <opt-in>
+      <div class="brand-logo"></div>
+    </opt-in>
+  </div>
+
+  <footer>
+    <img src="http://placehold.it/650x75">
+  </footer>
+
+  <!-- build:vendor js/vendor.js -->
+  <script src="bower_components/angular/angular.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/app.js -->
+  <script src="js/app.module.js"></script>
+  <script src="js/opt-in/opt-in.directive.js"></script>
+  <!-- endbuild -->
+</body>
+</html>

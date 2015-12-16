@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Trevor Nowalk",
+  "author": "Trevor Nowalk <tnowalk@thinkful.com>",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.11",

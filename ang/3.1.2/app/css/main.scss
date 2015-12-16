@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
+
+body {
+  font-family: 'Arimo', sans-serif;
+
+  header,footer {
+    width: 650px;
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-weight: 500;
+  }
+
+  .container {
+    width: 650px;
+    margin: auto;
+
+    .brand-logo {
+      background: url(http://placehold.it/150x175);
+      width: 150px;
+      height: 175px;
+    }
+  }
+
+  .pull-left {
+    float: left;
+  }
+
+  .pull-right {
+    float: right;
+  }
+
+  .clear-fix {
+    clear: both;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+}
