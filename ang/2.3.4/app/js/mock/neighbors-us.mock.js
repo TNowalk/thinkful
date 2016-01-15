@@ -1,0 +1,52 @@
+var countryFactoryNeighborsResponse = {
+  totalResultsCount: 3,
+  geonames: [{
+    adminCode1: '00',
+    lng:         '-113.64258',
+    geonameId:   6251999,
+    toponymName: 'Canada',
+    countryId:   '6251999',
+    fcl:         'A',
+    population:  33679000,
+    countryCode: 'CA',
+    name:        'Canada',
+    fclName:     'country, state, region,...',
+    countryName: 'Canada',
+    fcodeName:   'independent political entity',
+    adminName1:  '',
+    lat:         '60.10867',
+    fcode:       'PCLI'
+  },{
+    adminCode1:  '00',
+    lng:         '-79.5',
+    geonameId:   3562981,
+    toponymName: 'Republic of Cuba',
+    countryId:   '3562981',
+    fcl:         'A',
+    population:  11423000,
+    countryCode: 'CU',
+    name:        'Cuba',
+    fclName:     'country, state, region,...',
+    countryName: 'Cuba',
+    fcodeName:   'independent political entity',
+    adminName1:  '',
+    lat:         '22',
+    fcode:       'PCLI'
+  },{
+    adminCode1:  '00',
+    lng:         '-102',
+    geonameId:   3996063,
+    toponymName: 'Mexico',
+    countryId:   '3996063',
+    fcl:         'A',
+    population:  112468855,
+    countryCode: 'MX',
+    name:        'Mexico',
+    fclName:     'country, state, region,...',
+    countryName: 'Mexico',
+    fcodeName:   'independent political entity',
+    adminName1:  '',
+    lat:         '23',
+    fcode:       'PCLI'
+  }]
+};
