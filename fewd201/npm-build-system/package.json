@@ -2,12 +2,12 @@
   "name": "npm-build-system",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "js/index.js",
   "scripts": {
     "mkdir": "mkdir -p build",
     "clean": "rm -rf build",
-    "build": "npm run clean && npm run mkdir && npm run build:html && npm run build:css",
-    "watch": "npm run watch:html & npm run watch:css",
+    "build": "npm run clean && npm run mkdir && npm run build:html && npm run build:css && npm run build:js",
+    "watch": "npm run watch:html & npm run watch:css & npm run watch:js",
     "build:html": "npm run clean:html && cp index.html build/",
     "clean:html": "rm -rf build/clean.html",
     "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
@@ -19,13 +19,20 @@
     "clean:css:unminified": "rm -f build/$npm_package_name.$npm_package_version.css build/$npm_package_name.$npm_package_version.css.map",
     "build:css:minified": "npm run clean:css:minified && lessc --clean-css --source-map css/index.less build/$npm_package_name.$npm_package_version.min.css",
     "watch:css:minified": "npm run build:css:minified && chokidar 'css/**/*.(css|less)' -c 'npm run build:css:minified'",
-    "clean:css:minified": "rm -f build/$npm_package_name.$npm_package_version.min.css build/$npm_package_name.$npm_package_version.min.css.map"
+    "clean:css:minified": "rm -f build/$npm_package_name.$npm_package_version.min.css build/$npm_package_name.$npm_package_version.min.css.map",
+    "build:js": "npm run clean:js && webpack",
+    "watch:js": "npm run build:js && webpack --watch",
+    "clean:js": "rm -f build/$npm_package_name.$npm_package_version.js build/$npm_package_name.$npm_package_version.js.map"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
     "less": "^2.6.1",
-    "less-plugin-clean-css": "^1.5.1"
+    "less-plugin-clean-css": "^1.5.1",
+    "webpack": "^1.12.14"
+  },
+  "dependencies": {
+    "jquery": "^2.2.3"
   }
 }
