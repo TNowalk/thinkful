@@ -8,6 +8,7 @@ angular.module('ThinkfulProjects')
     ang: {code: 'ANG-001', name: 'Learn AngularJS'},
     fewdv4: {code: 'FEWD-001', name: 'Front-End Web Development v4'},
     fewd: {code: 'FEWD-001', name: 'Front-End Web Development v1'},
+    fewd201: {code: 'FEWD-201', name: 'Web Development Career Path (FEWD-201) v2'},
     //ios: {code: 'IOS-001', name: 'iOS Development'},
     pip: {code: 'PIP-001', name: 'Programming in Python'},
     //ror: {code: 'ROR-001', name: 'Ruby on Rails'}
@@ -230,6 +231,12 @@ angular.module('ThinkfulProjects')
         gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewdv4/4.3.4/'
       }
     ],
+    fewd201: [{
+      name: '1.1.2 - Model View Controller',
+      type: 'git',
+      filename: '1.1.2/',
+      gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd201/1.1.2/'  
+    }],
     fewd: [
       {
         name: 'HTML Resume',
