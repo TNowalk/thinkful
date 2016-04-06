@@ -235,7 +235,12 @@ angular.module('ThinkfulProjects')
       name: '1.1.2 - Model View Controller',
       type: 'git',
       filename: '1.1.2/',
-      gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd201/1.1.2/'  
+      gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd201/1.1.2/'
+    },{
+      name: '1.2.3 - NPM as a Build System',
+      type: 'git',
+      filename: '1.2.3/',
+      gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd201/1.2.3/'
     }],
     fewd: [
       {
