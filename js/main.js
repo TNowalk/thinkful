@@ -241,6 +241,11 @@ angular.module('ThinkfulProjects')
       type: 'git',
       filename: 'npm-build-system/build/',
       gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd201/npm-build-system/'
+    },{
+      name: 'Data Structures - Big O Notation',
+      type: 'git',
+      filename: '2.1.1',
+      gitHubUrl: 'https://github.com/TNowalk/thinkful/blob/gh-pages/fewd201/2.1.1/'
     }],
     fewd: [
       {
