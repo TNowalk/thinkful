@@ -63,7 +63,7 @@
                     </div>
                     <div class="col-xs-3 col-sm-5">
                       <div class='pull-right'>
-                        <a ng-if="project.type == 'git' && project.filename != undefined"
+                        <a ng-if="['git'].indexOf(project.type) !== -1 && project.filename != undefined"
                            ng-href='{{idx}}/{{project.filename}}'
                            class='btn btn-primary btn-xs'>
                           <span class="visible-xs">
@@ -73,7 +73,7 @@
                             <i class='fa fa-fw fa-download'></i> Direct Download
                           </span>
                         </a>
-                        <a ng-if="project.type == 'git'"
+                        <a ng-if="['git', 'markdown'].indexOf(project.type) !== -1"
                            ng-href='{{project.gitHubUrl}}'
                            class='btn btn-default btn-xs'
                            target="_blank">
