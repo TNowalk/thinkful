@@ -78,7 +78,7 @@ If you were to plot these on a graph, you'd notice a straight line that goes up.
 
 ![O(n) - Linear Time](linear-graph.png "O(n) - Linear Time")
 
-Click through he following links for some examples of each time complexity:
+Click through the following links for some examples of each time complexity:
 
 [O(1) - Constant Time](constant-time.md)  
 [O(n) - Linear Time](linear-time.md)  
