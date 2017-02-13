@@ -9,7 +9,7 @@ s = 1 ms
 n = n^2 = 10^2 = 100 elements
 s = s + 1 = 1 + 1 = 2 ms
 
-n = n^2 = 100^2 = 1,000 elements
+n = n^2 = 100^2 = 10,000 elements
 s = s + 1 = 2 + 1 = 3 ms
 
 n = n^2 = 1,000^2 = 1,000,000 elements
